@@ -9,12 +9,13 @@ const komisiData = [
     name: 'Komisi 1',
     title: 'Penampung dan Penyalur Aspirasi',
     description: 'Komisi I berfokus dalam perannya menjadi penyalur aspirasi siswa SMA Negeri 1 Margaasih, yang mempunyai tugas utama sebagai wadah penampung aspirasi siswa, juga sebagai pengawas OSIS Sekbid 1 dan Sekbid 2.',
+    groupImage: '/images/komisi/komisi1.jpeg',
     members: [
       { name: 'Callula Shafa Avila', kelas: 'XI IPA 3', jabatan: 'Ketua Komisi', image: '/images/Dokumentasi foto per orang/22.png'},
       { name: 'Alya Batrisya Said', kelas: 'XI IPS 5', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/9.png'},
-      { name: 'Muhammad Alandra Fairuz', kelas: 'X 3', jabatan: 'Orang kece', image: '/images/Dokumentasi foto per orang/18.png'},
+      { name: 'Muhammad Alandra Fairuz', kelas: 'X 3', jabatan: 'Anggotahh', image: '/images/Dokumentasi foto per orang/18.png'},
       { name: 'Azkya Royan Maharani', kelas: 'X 4', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/20.png' },
-      { name: 'Riva Sukma Amilin', kelas: 'X 5', jabatan: 'Anggota' },
+      { name: 'Riva Sukma Amilin', kelas: 'X 5', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/25.png' },
     ],
   },
   {
@@ -22,11 +23,12 @@ const komisiData = [
     name: 'Komisi 2',
     title: 'Hubungan Masyarakat',
     description: 'Komisi II berperan sebagai humas organisasi, publikasi dan dokumentasi kegiatan MPK SMA Negeri 1 Margaasih, serta bertugas sebagai pengawas kinerja OSIS Sekbid 3 dan Sekbid 4.', // Deskripsi komisi 2
+    groupImage: '/images/komisi/komisi2.jpeg',
     members: [
       { name: 'Naya Widya Putri', kelas: 'XI IPA 5', jabatan: 'Ketua Komisi', image: '/images/Dokumentasi foto per orang/3.png'},
       { name: 'Seli Maulidia', kelas: 'XI IPS 3', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/6.png' },
       { name: 'Sabrina Bilqis', kelas: 'XI IPS 4', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/5.png' },
-      { name: 'Azillie Zulfa Syahrushiam', kelas: 'X 7', jabatan: 'Anggota' },
+      { name: 'Azillie Zulfa Syahrushiam', kelas: 'X 7', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/24.png' },
       { name: 'Hafizha Nur Khaira', kelas: 'X 12', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/10.png' },
     ],
   },
@@ -35,8 +37,9 @@ const komisiData = [
     name: 'Komisi 3',
     title: 'Ekstrakulikuler dan Prestasi',
     description: 'Komisi III bertugas menjadi pengurus bidang ekstrakurikuler di SMA Negeri 1 Margaasih, juga sebagai pengawas kinerja OSIS Sekbid 5 dan 6.',
+    groupImage: '/images/komisi/komisi3.jpeg',
     members: [
-      { name: 'Raifa Junia Keaila', kelas: 'XI IPS 7', jabatan: 'Ketua Komisi' },
+      { name: 'Raifa Junia Keaila', kelas: 'XI IPS 7', jabatan: 'Ketua Komisi', image: '/images/Dokumentasi foto per orang/26.png' },
       { name: 'Shevira Dwi Fitria', kelas: 'XI IPS 1', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/8.png' },
       { name: 'Neng Wini Fathu Rohmah', kelas: 'X 1', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/15.png' },
       { name: 'Assyfa Rahmi Illahi Q.J.P.K', kelas: 'X 9', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/12.png' },
@@ -47,6 +50,7 @@ const komisiData = [
     name: 'Komisi 4',
     title: 'Keanggotaan dan Administrasi',
     description: 'Komisi IV berperan sebagai konektor (perombak, memperbaiki kesalahan) administrasi organisasi, serta sebagai pengurus Anggaran Dasar dan Rumah Tangga organisasi, juga bertugas mengawasi kinerja OSIS Sekbid 7 dan Sekbid 8.',
+    groupImage: '/images/komisi/komisi4.jpg',
     members: [
       { name: 'Azriel Falco Moreno', kelas: 'XI IPA 2', jabatan: 'Ketua Komisi', image: '/images/Dokumentasi foto per orang/11.png' },
       { name: 'Syifa Raya Merlinda', kelas: 'X 2', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/14.png' },
@@ -82,19 +86,19 @@ const allProkerData: ProkerItem[] = [
   { category: 'komisi1', title: 'Laman MPK', tujuan: 'Sebagai media informasi dan komunikasi resmi untuk menyampaikan program kerja, kegiatan, serta aspirasi siswa yang mudah diakses oleh seluruh siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang' },
   { category: 'komisi1', title: 'SAKEDAP (Saran Kegiatan dan Perlombaan)', tujuan: 'Menampung aspirasi siswa/i pra event melalui Google Form yang akan diunggah pada Story Instagram MPK dan OSIS yang sudah disediakan.', pelaksanaan: 'Jangka Panjang' },
   { category: 'komisi1', title: 'PENA (Pesan Anonim)', tujuan: 'Sebagai wadah penyaluran pesan siswa/i SMAN 1 Margaasih secara anonim kepada para pengurus MPK dan OSIS.', pelaksanaan: 'Jangka Pendek' },
-  { category: 'komisi2', title: 'Poster Peringatan Hari Besar dan Nasional.', tujuan: 'Menumbuhkan rasa nasionalisme dan semangat kebangsaan, berupa poster yang di buat. Di share melalui story Instagram MPK.', pelaksanaan: 'Jangka panjang' },
-  { category: 'komisi2', title: 'Lebih Mengaktifkan Media Sosial (Instagram).', tujuan: 'Mendokumentasikan setiap kegiatan yang berhubungan dengan OSIS.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi2', title: 'Membuat Broadcast Pada Setiap Kegiatan Rapat.', tujuan: 'Tujuan proker ini untuk membangun sistem komunikasi yang terstruktur dan jelas bagi pengurus.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi2', title: 'Membuat Poster Orasi Pemilihan Ketua dan Wakil Ketua MPK Masa Periode Selanjutnya.', tujuan: 'Membuat poster informasi tentang pergantian ketua dan wakil ketua MPK untuk periode selanjutnya.', pelaksanaan: 'Jangka pendek' },
-  { category: 'komisi3', title: 'Melaksanakan Kegiatan Sosialiasi Ekstrakurikuler.', tujuan: 'Agar seluruh siswa/siswi SMA Negeri 1 Margasih memperoleh pemahaman mengenai pilihan ekstrakurikuler yang ada serta terdorong untuk mengikuti kegiatan ekstrakurikuler sesuai dengan minat dan bakat masing-masing.', pelaksanaan: 'Jangka Pendek' },
-  { category: 'komisi3', title: 'Tanda Penghargaan Ekstrakurikuler Yang Paling Banyak Meraih Juara Selama Setahun.', tujuan: 'Memberikan motivasi serta rasa bangga bagi seluruh anggota esktrakurikuler atas kerja kerja mereka.', pelaksanaan: 'Jangka Pendek' },
-  { category: 'komisi3', title: 'Koordinasi Rutin Dengan Pembina dan Ketua Ekstrakurikuler Terkait Jadwal Serta Kegiatan Eskul.', tujuan: 'Agar pelaksanaan kegiatan ekstrakurikuler dapat berjalan dengan tertib dan sesuai dengan jadwal yang telah ditetapkan.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi3', title: 'Memfasilitasi Penyampaian Informasi Kegiatan Ekstrakurikuler Melalui Media Informasi Yang Tersedia.', tujuan: 'Agar mendukung keterbukaan informasi kegiatan ekstrakurikulerkepada seluruh siswa/siswi.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi3', title: 'Mendata Pencapaian Hasil Perlombaan yang Telah Diikuti oleh Anggota Ekstrakurikuler.', tujuan: 'Memberikan apresiasi atas keberhasilan agar memotivasi semangat siswa dalam berprestasi.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi3', title: 'Meninjau Pelaksanaan Latihan Mingguan Sesuai Ketetapan Pengurus Ekstrakurikuler.', tujuan: 'Menjamin kelancaran seluruh agenda tanpa ada gangguan.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi3', title: 'Merangkum Seluruh Data Kegiatan dan Pencapaian Selama Satu Tahun Kepengurusan.', tujuan: 'Menjadi bahan evaluasi bagi pengurus selanjutnya agar menjadi lebih baik.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi2', title: 'Poster Peringatan Hari Besar dan Nasional', tujuan: 'Menumbuhkan rasa nasionalisme dan semangat kebangsaan, berupa poster yang di buat. Di share melalui story Instagram MPK.', pelaksanaan: 'Jangka panjang' },
+  { category: 'komisi2', title: 'Lebih Mengaktifkan Media Sosial (Instagram)', tujuan: 'Mendokumentasikan setiap kegiatan yang berhubungan dengan OSIS.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi2', title: 'Membuat Broadcast Pada Setiap Kegiatan Rapat', tujuan: 'Tujuan proker ini untuk membangun sistem komunikasi yang terstruktur dan jelas bagi pengurus.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi2', title: 'Membuat Poster Orasi Pemilihan Ketua dan Wakil Ketua MPK Masa Periode Selanjutnya', tujuan: 'Membuat poster informasi tentang pergantian ketua dan wakil ketua MPK untuk periode selanjutnya.', pelaksanaan: 'Jangka pendek' },
+  { category: 'komisi3', title: 'Melaksanakan Kegiatan Sosialiasi Ekstrakurikuler', tujuan: 'Agar seluruh siswa/siswi SMA Negeri 1 Margasih memperoleh pemahaman mengenai pilihan ekstrakurikuler yang ada serta terdorong untuk mengikuti kegiatan ekstrakurikuler sesuai dengan minat dan bakat masing-masing.', pelaksanaan: 'Jangka Pendek' },
+  { category: 'komisi3', title: 'Tanda Penghargaan Ekstrakurikuler Yang Paling Banyak Meraih Juara Selama Setahun', tujuan: 'Memberikan motivasi serta rasa bangga bagi seluruh anggota esktrakurikuler atas kerja kerja mereka.', pelaksanaan: 'Jangka Pendek' },
+  { category: 'komisi3', title: 'Koordinasi Rutin Dengan Pembina dan Ketua Ekstrakurikuler Terkait Jadwal Serta Kegiatan Eskul', tujuan: 'Agar pelaksanaan kegiatan ekstrakurikuler dapat berjalan dengan tertib dan sesuai dengan jadwal yang telah ditetapkan.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi3', title: 'Memfasilitasi Penyampaian Informasi Kegiatan Ekstrakurikuler Melalui Media Informasi Yang Tersedia', tujuan: 'Agar mendukung keterbukaan informasi kegiatan ekstrakurikulerkepada seluruh siswa/siswi.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi3', title: 'Mendata Pencapaian Hasil Perlombaan yang Telah Diikuti oleh Anggota Ekstrakurikuler', tujuan: 'Memberikan apresiasi atas keberhasilan agar memotivasi semangat siswa dalam berprestasi.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi3', title: 'Meninjau Pelaksanaan Latihan Mingguan Sesuai Ketetapan Pengurus Ekstrakurikuler', tujuan: 'Menjamin kelancaran seluruh agenda tanpa ada gangguan.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi3', title: 'Merangkum Seluruh Data Kegiatan dan Pencapaian Selama Satu Tahun Kepengurusan', tujuan: 'Menjadi bahan evaluasi bagi pengurus selanjutnya agar menjadi lebih baik.', pelaksanaan: 'Jangka Panjang' },
   { category: 'komisi4', title: 'Pemantauan Awal Terhadap Pelaksanaan AD/ART OSIS/MPK', tujuan: 'Melakukan pemantauan awal terhadap pelaksanaan AD/ART OSIS/MPK pada awal masa jabatan agar seluruh kegiatan dan struktur organisasi berjalan sesuai ketentuan.', pelaksanaan: 'Jangka pendek' },
-  { category: 'komisi4', title: 'Mengawasi Kinerja OSIS Dalam Melaksanakan Tugas.', tujuan: 'Mengawasi kinerja OSIS dalam melaksanakan kegiatanya.', pelaksanaan: 'Jangka menengah' },
+  { category: 'komisi4', title: 'Mengawasi Kinerja OSIS Dalam Melaksanakan Tugas', tujuan: 'Mengawasi kinerja OSIS dalam melaksanakan kegiatanya.', pelaksanaan: 'Jangka menengah' },
   { category: 'komisi4', title: 'Melaksanakan Rapat Rutin MPK', tujuan: 'Melaksanakan rapat rutin tiap 2 bulan untuk membahas kembali program kerja dan rencana kedepan', pelaksanaan: 'Jangka panjang' },
 ];
 
@@ -221,64 +225,73 @@ export default function About() {
                           <p className="text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">Pembina MPK</p>
                           <p className="font-bold text-dark-green text-base leading-tight">Adang Cucu Cahyana, S.Pd.</p>
                         </div>
-                        <div className="w-px h-8 bg-slate-200"></div>
+                        <div className="w-px h-6 sm:h-12 bg-slate-200"></div>
                       </div>
 
                       <div className="relative max-w-4xl mx-auto mb-0">
-                        <div className="absolute top-0 h-px bg-slate-200 hidden sm:block left-[calc((100%_-_2rem)/4)] w-[calc(50%_+_1rem)]" aria-hidden />
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 relative">
+                        <div className="absolute top-0 h-px bg-slate-200 hidden sm:block left-[calc((100%_-_3rem)/4)] w-[calc(50%_+_1.5rem)]" aria-hidden />
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12 relative">
                           <div className="flex flex-col items-center">
-                            <div className="w-px h-6 shrink-0 bg-slate-200 hidden sm:block"></div>
-                            <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[160px] w-full">
-                              <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-dark-green/10 shadow-sm bg-slate-50">
+                            <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block"></div>
+                            <motion.div 
+                              whileHover={{ scale: 1.03 }}
+                              className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[260px] w-full"
+                            >
+                              <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-dark-green/10 shadow-md bg-slate-50">
                                 <img 
                                   src="/images/Dokumentasi foto per orang/7.png" 
                                   alt="Sherin Alivka S - Ketua MPK" 
                                   className="w-full h-full object-cover"
                                 />
                               </div>
-                              <h3 className="font-bold text-dark-green">Ketua MPK</h3>
-                              <p className="text-goldenrod font-semibold mt-1">Sherin Alivka S</p>
-                              <p className="text-slate-500 text-sm">XI IPA 2</p>
-                            </div>
+                              <h3 className="font-bold text-dark-green text-lg uppercase tracking-wide">Ketua MPK</h3>
+                              <p className="text-goldenrod font-bold text-2xl mt-1">Sherin Alivka S</p>
+                              <p className="text-slate-500 text-base mt-1">XI IPA 2</p>
+                            </motion.div>
                           </div>
                           <div className="flex flex-col items-center">
-                            <div className="w-px h-6 shrink-0 bg-slate-200 hidden sm:block"></div>
-                            <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[160px] w-full">
-                              <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-goldenrod/10 shadow-sm bg-slate-50">
+                            <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block"></div>
+                            <motion.div 
+                              whileHover={{ scale: 1.03 }}
+                              className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[260px] w-full"
+                            >
+                              <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-goldenrod/10 shadow-md bg-slate-50">
                                 <img 
                                   src="/images/Dokumentasi foto per orang/2.png" 
                                   alt="Nailah Khoirunnisa - Wakil Ketua MPK" 
                                   className="w-full h-full object-cover"
                                 />
                               </div>
-                              <h3 className="font-bold text-dark-green">Wakil Ketua MPK</h3>
-                              <p className="text-goldenrod font-semibold mt-1">Nailah Khoirunnisa</p>
-                              <p className="text-slate-500 text-sm">XI IPA 4</p>
-                            </div>
+                              <h3 className="font-bold text-dark-green text-lg uppercase tracking-wide">Wakil Ketua MPK</h3>
+                              <p className="text-goldenrod font-bold text-2xl mt-1">Nailah Khoirunnisa</p>
+                              <p className="text-slate-500 text-base mt-1">XI IPA 4</p>
+                            </motion.div>
                           </div>
                         </div>
                       </div>
 
-                      <div className="mt-10">
+                      <div className="mt-4 sm:mt-6">
                         <div className="flex justify-center">
-                          <div className="w-px h-16 shrink-0 bg-slate-200 hidden sm:block" />
+                          <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block" />
                         </div>
-                        <div className="relative mb-6">
-                          <div className="absolute top-0 h-px bg-slate-200 hidden sm:block left-[calc((100%_-_3rem)/8)] w-[calc(75%_+_0.75rem)]" aria-hidden />
-                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div className="relative mb-4">
+                          <div className="absolute top-0 h-px bg-slate-200 hidden lg:block left-[calc((100%_-_6rem)/8)] w-[calc(75%_+_1.5rem)]" aria-hidden />
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
                             {[
-                              { label: 'Sekretaris 1', name: 'Aulia Panca Oktaviani Putri', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/Unidentified.png' },
+                              { label: 'Sekretaris 1', name: 'Aulia Panca Oktaviani Putri', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/23.png' },
                               { label: 'Sekretaris 2', name: 'Nadila Puspa Rini', kelas: 'X 10', image: '/images/Dokumentasi foto per orang/16.png' },
                               { label: 'Bendahara 1', name: 'Indri Pratiwi', kelas: 'XI IPS 6', image: '/images/Dokumentasi foto per orang/1.png' },
                               { label: 'Bendahara 2', name: 'Annisa Agustina', kelas: 'X 11', image: '/images/Dokumentasi foto per orang/17.png' }
                             ].map((staff, idx) => (
                               <div key={idx} className="flex flex-col items-center">
-                                <div className="w-px h-4 shrink-0 bg-slate-200 hidden sm:block"></div>
-                                <div className="bg-white border border-slate-200 rounded-xl p-4 text-center shadow-sm flex flex-col items-center justify-center w-full h-full min-h-[160px]">
-                                  <p className="text-[10px] text-slate-500 uppercase tracking-widest mb-2">{staff.label}</p>
+                                <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden lg:block"></div>
+                                <motion.div 
+                                  whileHover={{ scale: 1.03 }}
+                                  className="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center w-full h-full min-h-[210px]"
+                                >
+                                  <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">{staff.label}</p>
                                   {(staff as any).image ? (
-                                    <div className="w-16 h-16 rounded-full overflow-hidden mb-2 border-2 border-slate-200 shadow-sm bg-slate-50">
+                                    <div className="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-slate-200 shadow-sm bg-slate-50">
                                       <img
                                         src={(staff as any).image}
                                         alt={staff.name}
@@ -286,37 +299,35 @@ export default function About() {
                                       />
                                     </div>
                                   ) : (
-                                    <div className="w-16 h-16 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-xl font-bold shrink-0 mb-2">
+                                    <div className="w-24 h-24 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-4xl font-bold shrink-0 mb-3">
                                       {staff.name.charAt(0)}
                                     </div>
                                   )}
-                                  <p className="font-semibold text-dark-green text-sm">{staff.name}</p>
-                                  <p className="text-slate-500 text-[10px]">{staff.kelas}</p>
-                                </div>
+                                  <p className="font-bold text-dark-green text-base leading-tight mb-1">{staff.name}</p>
+                                  <p className="text-slate-500 text-xs">{staff.kelas}</p>
+                                </motion.div>
                               </div>
-                            ))}
+                            ))} 
                           </div>
                         </div>
 
                         <div className="flex justify-center">
-                          <div className="w-px h-6 shrink-0 bg-slate-200 hidden sm:block"></div>
+                          <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block"></div>
                         </div>
                         <div className="relative">
-                          <div className="absolute top-0 h-px bg-slate-200 hidden sm:block left-[calc((100%_-_3rem)/8)] w-[calc(75%_+_0.75rem)]" aria-hidden />
-                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                          <div className="absolute top-0 h-px bg-slate-200 hidden lg:block left-[calc((100%_-_3rem)/8)] w-[calc(75%_+_0.75rem)]" aria-hidden />
+                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                             {komisiData.map((k) => (
                               <div key={k.id} className="flex flex-col items-center">
                                 <div className="w-px h-4 shrink-0 bg-slate-200 hidden sm:block"></div>
-                                <button
+                                <motion.button
                                   onClick={() => setActiveTab(k.id)}
-                                  className="bg-white border border-slate-200 rounded-xl p-5 text-center shadow-sm hover:shadow-md hover:border-gold transition-all cursor-pointer flex flex-col items-center w-full"
+                                  whileHover={{ scale: 1.03 }}
+                                  className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:border-gold transition-all cursor-pointer flex flex-col items-center w-full h-full"
                                 >
-                                  <div className="w-12 h-12 rounded-lg bg-vanilla/20 text-goldenrod flex items-center justify-center mx-auto mb-3 font-bold text-lg">
-                                    {k.id === 'komisi1' ? 'K1' : k.id === 'komisi2' ? 'K2' : k.id === 'komisi3' ? 'K3' : 'K4'}
-                                  </div>
-                                  <h4 className="font-semibold text-dark-green text-sm">{k.name}</h4>
-                                  <p className="text-slate-500 text-[11px] mt-1 line-clamp-2">{k.title}</p>
-                                </button>
+                                  <h4 className="font-semibold text-dark-green text-base">{k.name}</h4>
+                                  <p className="text-slate-500 text-xs mt-1 line-clamp-2">{k.title}</p>
+                                </motion.button>
                               </div>
                             ))}
                           </div>
@@ -393,28 +404,42 @@ export default function About() {
                     transition={{ duration: 0.2 }}
                   >
                     <div>
-                      <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold text-dark-green">{komisi.name}</h2>
-                        <p className="text-goldenrod font-medium mt-1">{komisi.title}</p>
-                        <p className="text-slate-500 max-w-2xl mx-auto mt-2 text-sm">{komisi.description}</p>
+                      <div className="relative max-w-5xl mx-auto mb-10 h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                        <motion.img 
+                          src={(komisi as any).groupImage} 
+                          alt={komisi.name} 
+                          className="absolute inset-0 w-full h-full object-cover"
+                          animate={{ scale: [1, 1.1] }}
+                          transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white">
+                          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold leading-tight">{komisi.name}</h2>
+                          <p className="text-xs sm:text-base text-yellow-400 font-semibold mt-1">{komisi.title}</p>
+                          <p className="text-[10px] sm:text-sm md:text-base text-slate-200 mt-2 max-w-2xl leading-tight">{komisi.description}</p>
+                        </div>
                       </div>
-                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mt-6">
                         {komisi.members.map((member, idx) => (
-                          <div key={idx} className="bg-white border border-slate-200 rounded-xl p-5 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 rounded-full bg-dark-green text-white flex items-center justify-center text-lg font-bold shrink-0 overflow-hidden border border-slate-100">
+                          <motion.div 
+                            key={idx} 
+                            whileHover={{ scale: 1.03 }}
+                            className="bg-white border border-slate-200 rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow h-full"
+                          >
+                            <div className="w-32 h-32 rounded-full bg-dark-green text-white flex items-center justify-center text-4xl font-bold shrink-0 overflow-hidden border-4 border-slate-50 shadow-md mb-3">
                               {(member as any).image ? (
                                 <img src={(member as any).image} alt={member.name} className="w-full h-full object-cover" />
                               ) : (
                                 member.name.charAt(0)
                               )}
                             </div>
-                            <div>
-                              <p className="font-semibold text-dark-green">{member.name}</p>
+                            <div className="space-y-0.5">
+                              <p className="font-bold text-dark-green text-lg leading-tight">{member.name}</p>
                               <p className="text-slate-500 text-sm">
-                                {member.kelas} · <span className="text-goldenrod">{member.jabatan}</span>
+                                {member.kelas} · <span className="text-goldenrod font-semibold">{member.jabatan}</span>
                               </p>
                             </div>
-                          </div>
+                          </motion.div>
                         ))}
                       </div>
                     </div>

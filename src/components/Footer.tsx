@@ -34,9 +34,9 @@ export default function Footer() {
                   href="https://maps.app.goo.gl/uHYRwbbbtvVBMya66"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 w-fit px-2 py-1 bg-yellow hover:bg-yellow-400 text-dark-green text-[10px] font-bold uppercase tracking-widest rounded transition-all duration-200 shadow-sm"
+                  className="inline-flex items-center gap-1.5 w-fit px-3 py-1.5 bg-gold/10 hover:bg-gold text-gold hover:text-dark-green text-[11px] font-bold rounded-md transition-all duration-300 border border-gold/30"
                 >
-                  Lihat di Maps
+                  Lihat di Google Maps
                   <ExternalLink size={12} />
                 </a>
               </div>

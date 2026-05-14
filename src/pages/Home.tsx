@@ -104,20 +104,12 @@ export default function Home() {
           </div>
           <div className="space-y-2">
             <motion.h1
-              className="text-white font-black text-8xl md:text-9xl tracking-normal uppercase leading-none cursor-default bg-clip-text"
+              className="text-white font-black text-8xl md:text-9xl tracking-normal uppercase leading-none cursor-default"
               whileHover={{
-                backgroundImage: "linear-gradient(90deg, #ffffff, #fff9e9, #ffffff, #fff9e9, #ffffff)",
-                backgroundSize: "200% 100%",
-                color: "transparent",
-                textShadow: "0px 0px 30px rgba(218, 165, 32, 0.4)",
+                textShadow: "0px 0px 10px rgba(255, 255, 255, 0.6)",
+                filter: "brightness(1.2)",
               }}
-              animate={{
-                backgroundPosition: ["0% 0%", "200% 0%"],
-              }}
-              transition={{
-                backgroundPosition: { duration: 3, repeat: Infinity, ease: "linear" },
-                duration: 0.4
-              }}
+              transition={{ duration: 0.3 }}
             >
               MPK
             </motion.h1>

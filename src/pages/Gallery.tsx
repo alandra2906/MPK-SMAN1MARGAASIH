@@ -18,6 +18,11 @@ const galleryImages = [
   { src: '/images/IMG-20260131-WA0038.jpg.jpeg', caption: 'Foto Bersama OSIS & MPK pasca Sidang Pleno I 2026' },
   { src: '/images/IMG-20260130-WA0104.jpg.jpeg', caption: 'Rapat Pra Sidang Pleno I 2026' },
   { src: '/images/IMG-20251030-WA0074.jpg.jpeg', caption: 'Rapat Pra Event Career Day 2026' },
+  { src: '/images/c5b4c8d3-a390-4596-820c-e92047eecdec.jpg', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
+  { src: '/images/930b664d-06a9-4bad-b171-773a5c4cd0aa.jpg', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
+  { src: '/images/b5c7f77d-7277-440b-a0ed-bd1e62d107d6.jpg', caption: 'Sesi Foto Profil Sekolah 2026' },
+  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.jpg', caption: 'Sesi Foto Profil Sekolah 2026' },
+  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.jpg', caption: 'Sesi Foto Profil Sekolah 2026' }, 
 ]
 
 export default function Gallery() {
@@ -176,7 +181,7 @@ export default function Gallery() {
             Dokumentasi
           </h2>
           <p className="text-slate-500 text-center mb-12 max-w-xl mx-auto">
-            Dokumentasi dan Momen Kegiatan MPK yang Berkesan.
+            Dokumentasi dan Momen-momen Kegiatan MPK.
           </p>
 
           <div className="columns-1 md:columns-2 lg:columns-3 gap-4 max-w-6xl mx-auto">
