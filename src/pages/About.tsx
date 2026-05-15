@@ -25,7 +25,7 @@ const komisiData = [
     description: 'Komisi II berperan sebagai humas organisasi, publikasi dan dokumentasi kegiatan MPK SMA Negeri 1 Margaasih, serta bertugas sebagai pengawas kinerja OSIS Sekbid 3 dan Sekbid 4.', // Deskripsi komisi 2
     groupImage: '/images/komisi/komisi2.jpeg',
     members: [
-      { name: 'Naya Widya Putri', kelas: 'XI IPA 5', jabatan: 'Ketua Komisi', image: '/images/Dokumentasi foto per orang/3.png'},
+      { name: 'Naya Widyani Putri', kelas: 'XI IPA 5', jabatan: 'Ketua Komisi', image: '/images/Dokumentasi foto per orang/3.png'},
       { name: 'Seli Maulidia', kelas: 'XI IPS 3', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/6.png' },
       { name: 'Sabrina Bilqis', kelas: 'XI IPS 4', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/5.png' },
       { name: 'Azillie Zulfa Syahrushiam', kelas: 'X 7', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/24.png' },
@@ -278,7 +278,7 @@ export default function About() {
                           <div className="absolute top-0 h-px bg-slate-200 hidden lg:block left-[calc((100%_-_6rem)/8)] w-[calc(75%_+_1.5rem)]" aria-hidden />
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
                             {[
-                              { label: 'Sekretaris 1', name: 'Aulia Panca Oktaviani Putri', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/23.png' },
+                              { label: 'Sekretaris 1', name: 'Aulia Panca Oktaviani', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/23.png' },
                               { label: 'Sekretaris 2', name: 'Nadila Puspa Rini', kelas: 'X 10', image: '/images/Dokumentasi foto per orang/16.png' },
                               { label: 'Bendahara 1', name: 'Indri Pratiwi', kelas: 'XI IPS 6', image: '/images/Dokumentasi foto per orang/1.png' },
                               { label: 'Bendahara 2', name: 'Annisa Agustina', kelas: 'X 11', image: '/images/Dokumentasi foto per orang/17.png' }
