@@ -13,7 +13,7 @@ const komisiData = [
     members: [
       { name: 'Callula Shafa Avila', kelas: 'XI IPA 3', jabatan: 'Ketua Komisi', image: '/images/Dokumentasi foto per orang/22.png'},
       { name: 'Alya Batrisya Said', kelas: 'XI IPS 5', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/9.png'},
-      { name: 'Muhammad Alandra Fairuz', kelas: 'X 3', jabatan: 'Anggotahh', image: '/images/Dokumentasi foto per orang/18.png'},
+      { name: 'Muhammad Alandra Fairuz', kelas: 'X 3', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/18.png', link: 'https://www.instagram.com/ieah296/'},
       { name: 'Azkya Royan Maharani', kelas: 'X 4', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/20.png' },
       { name: 'Riva Sukma Amilin', kelas: 'X 5', jabatan: 'Anggota', image: '/images/Dokumentasi foto per orang/25.png' },
     ],
@@ -237,7 +237,7 @@ export default function About() {
                               whileHover={{ scale: 1.03 }}
                               className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[260px] w-full"
                             >
-                              <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-dark-green/10 shadow-md bg-slate-50">
+                              <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-goldenrod/30 shadow-md bg-slate-50">
                                 <img 
                                   src="/images/Dokumentasi foto per orang/7.png" 
                                   alt="Sherin Alivka S - Ketua MPK" 
@@ -255,7 +255,7 @@ export default function About() {
                               whileHover={{ scale: 1.03 }}
                               className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[260px] w-full"
                             >
-                              <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-goldenrod/10 shadow-md bg-slate-50">
+                              <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-goldenrod/30 shadow-md bg-slate-50">
                                 <img 
                                   src="/images/Dokumentasi foto per orang/2.png" 
                                   alt="Nailah Khoirunnisa - Wakil Ketua MPK" 
@@ -295,13 +295,14 @@ export default function About() {
                                       <img
                                         src={(staff as any).image}
                                         alt={staff.name}
+                                        loading="lazy"
                                         className="w-full h-full object-cover"
                                       />
                                     </div>
                                   ) : (
-                                    <div className="w-24 h-24 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-4xl font-bold shrink-0 mb-3">
+                                    <p className="w-24 h-24 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-4xl font-bold shrink-0 mb-3">
                                       {staff.name.charAt(0)}
-                                    </div>
+                                    </p>
                                   )}
                                   <p className="font-bold text-dark-green text-base leading-tight mb-1">{staff.name}</p>
                                   <p className="text-slate-500 text-xs">{staff.kelas}</p>
@@ -406,7 +407,8 @@ export default function About() {
                     <div>
                       <div className="relative max-w-5xl mx-auto mb-10 h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                         <motion.img 
-                          src={(komisi as any).groupImage} 
+                          src={(komisi as any).groupImage}
+                          loading="lazy"
                           alt={komisi.name} 
                           className="absolute inset-0 w-full h-full object-cover"
                           animate={{ scale: [1, 1.1] }}
@@ -424,11 +426,12 @@ export default function About() {
                           <motion.div 
                             key={idx} 
                             whileHover={{ scale: 1.03 }}
-                            className="bg-white border border-slate-200 rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow h-full"
+                            onClick={() => (member as any).link && window.open((member as any).link, '_blank', 'noopener,noreferrer')}
+                            className={`bg-white border border-slate-200 rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow h-full ${(member as any).link ? 'cursor-pointer' : ''}`}
                           >
                             <div className="w-32 h-32 rounded-full bg-dark-green text-white flex items-center justify-center text-4xl font-bold shrink-0 overflow-hidden border-4 border-slate-50 shadow-md mb-3">
                               {(member as any).image ? (
-                                <img src={(member as any).image} alt={member.name} className="w-full h-full object-cover" />
+                                <img src={(member as any).image} alt={member.name} loading="lazy" className="w-full h-full object-cover" />
                               ) : (
                                 member.name.charAt(0)
                               )}

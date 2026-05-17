@@ -12,24 +12,26 @@ const alumniList = [
 ]
 
 const galleryImages = [
-  { src: '/images/IMG-20251006-WA0120.jpg.jpeg', caption: 'Pasca Pemilihan Ketua dan Wakil Ketua MPK' },
-  { src: '/images/IMG-20260131-WA0009.jpg.jpeg', caption: 'Foto Bersama Pasca Sidang Pleno I 2026' },
-  { src: '/images/IMG-20260131-WA0015.jpg.jpeg', caption: 'Foto Bersama Pasca Sidang Pleno I 2026' },
-  { src: '/images/IMG-20260131-WA0038.jpg.jpeg', caption: 'Foto Bersama OSIS & MPK pasca Sidang Pleno I 2026' },
-  { src: '/images/IMG-20260130-WA0104.jpg.jpeg', caption: 'Rapat Pra Sidang Pleno I 2026' },
-  { src: '/images/IMG-20251030-WA0074.jpg.jpeg', caption: 'Rapat Pra Event Career Day 2026' },
-  { src: '/images/c5b4c8d3-a390-4596-820c-e92047eecdec.jpg', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
-  { src: '/images/930b664d-06a9-4bad-b171-773a5c4cd0aa.jpg', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
-  { src: '/images/b5c7f77d-7277-440b-a0ed-bd1e62d107d6.jpg', caption: 'Sesi Foto Profil Sekolah 2026' },
-  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.jpg', caption: 'Sesi Foto Profil Sekolah 2026' },
-  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.jpg', caption: 'Sesi Foto Profil Sekolah 2026' }, 
+  { src: '/images/IMG-20251006-WA0120.jpg.webp', caption: 'Pasca Pemilihan Ketua dan Wakil Ketua MPK' },
+  { src: '/images/IMG-20260131-WA0009.jpg.webp', caption: 'Foto Bersama Pasca Sidang Pleno I 2026' },
+  { src: '/images/IMG-20260131-WA0015.jpg.webp', caption: 'Foto Bersama Pasca Sidang Pleno I 2026' },
+  { src: '/images/IMG-20260131-WA0038.jpg.webp', caption: 'Foto Bersama OSIS & MPK pasca Sidang Pleno I 2026' },
+  { src: '/images/IMG-20260130-WA0104.jpg.webp', caption: 'Rapat Pra Sidang Pleno I 2026' },
+  { src: '/images/IMG-20251030-WA0074.jpg.webp', caption: 'Rapat Pra Event Career Day 2026' },
+  { src: '/images/c5b4c8d3-a390-4596-820c-e92047eecdec.webp', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
+  { src: '/images/930b664d-06a9-4bad-b171-773a5c4cd0aa.webp', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
+  { src: '/images/b5c7f77d-7277-440b-a0ed-bd1e62d107d6.webp', caption: 'Sesi Foto Profil Sekolah 2026' },
+  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.webp', caption: 'Sesi Foto Profil Sekolah 2026' },
+  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.webp', caption: 'Sesi Foto Profil Sekolah 2026' }, 
 ]
+
+const displayedImages = [...galleryImages].reverse()
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const openModal = (index: number) => {
-    setSelectedImage(galleryImages[index].src)
+    setSelectedImage(displayedImages[index].src)
     setCurrentIndex(index)
   }
 
@@ -40,16 +42,16 @@ export default function Gallery() {
 
   const nextImage = (e?: React.MouseEvent) => {
     e?.stopPropagation()
-    const nextIdx = (currentIndex + 1) % galleryImages.length
+    const nextIdx = (currentIndex + 1) % displayedImages.length
     setCurrentIndex(nextIdx)
-    setSelectedImage(galleryImages[nextIdx].src)
+    setSelectedImage(displayedImages[nextIdx].src)
   }
 
   const prevImage = (e?: React.MouseEvent) => {
     e?.stopPropagation()
-    const prevIdx = (currentIndex - 1 + galleryImages.length) % galleryImages.length
+    const prevIdx = (currentIndex - 1 + displayedImages.length) % displayedImages.length
     setCurrentIndex(prevIdx)
-    setSelectedImage(galleryImages[prevIdx].src)
+    setSelectedImage(displayedImages[prevIdx].src)
   }
 
   useEffect(() => {
@@ -184,17 +186,18 @@ export default function Gallery() {
             Dokumentasi dan Momen-momen Kegiatan MPK.
           </p>
 
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-4 max-w-6xl mx-auto">
-            {galleryImages.map((img, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {displayedImages.map((img, idx) => (
               <figure
                 key={`${img.src}-${idx}`}
                 onClick={() => openModal(idx)}
-                className="break-inside-avoid mb-4 group relative rounded-2xl overflow-hidden shadow-md border border-slate-200/80 bg-dark-green/5 cursor-pointer"
+              className="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200/80 bg-dark-green/5 cursor-pointer aspect-[4/3]"
               >
                 <img
                   src={img.src}
                   alt={img.caption}
-                  className="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-green/85 via-dark-green/20 to-transparent opacity-90 md:opacity-70 group-hover:opacity-95 transition-opacity duration-300 pointer-events-none" />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
@@ -245,7 +248,8 @@ export default function Gallery() {
                   exit={{ scale: 0.9, opacity: 0 }}
                   transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                   src={selectedImage}
-                  alt={galleryImages[currentIndex].caption}
+                  loading="lazy"
+                  alt={displayedImages[currentIndex].caption}
                   className="max-h-[80vh] w-auto object-contain rounded-lg shadow-2xl" // Reverted to original class
                   onClick={(e) => e.stopPropagation()}
                   // Removed all zoom/drag related event handlers and style
@@ -255,7 +259,7 @@ export default function Gallery() {
                 animate={{ y: 0, opacity: 1 }}
                 className="mt-6 text-white text-center font-medium text-2xl sm:text-4xl px-4"
               >
-                {galleryImages[currentIndex].caption}
+                {displayedImages[currentIndex].caption}
               </motion.p>
             </div>
 

@@ -84,8 +84,9 @@ export default function Home() {
           style={!isTouchDevice ? { x: parallaxX, y: parallaxY } : {}}
         >
           <img
-            src="/images/IMG-20251006-WA0120.jpg.jpeg"
+            src="/images/IMG-20251006-WA0120.jpg.webp"
             alt="Background"
+            loading="lazy"
             className="w-full h-full object-cover blur-[4px] scale-110 grayscale-[0.45] brightness-[0.45]"
           />
         </motion.div>
@@ -97,8 +98,9 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center text-center px-4 reveal revealed space-y-6 drop-shadow-[0_0_35px_rgba(255,255,255,0.2)]">
           <div className="transform transition-transform duration-1000">
             <img
-              src="/images/LOGOMPKFINAL.png"
+              src="/images/LOGOMPKFINAL.webp"
               alt="Logo MPK"
+              loading="lazy"
               className="w-48 h-48 md:w-80 md:h-80"
             />
           </div>
@@ -197,8 +199,9 @@ export default function Home() {
               <div className="relative group max-w-xs sm:max-w-sm lg:max-w-md">
                 <div className="absolute -inset-4 bg-gold/10 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img
-                  src="/images/Laman MPK.png"
+                  src="/images/Laman MPK.webp"
                   alt="Laman MPK"
+                  loading="lazy"
                   className="relative w-full h-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] rounded-2xl"
                 />
               </div>
@@ -251,7 +254,8 @@ export default function Home() {
             <div className="reveal">
               <div className="relative rounded-xl overflow-hidden shadow-xl">
                 <img
-                  src="/images/IMG-20260130-WA0104.jpg.jpeg"
+                  src="/images/IMG-20260130-WA0104.jpg.webp"
+                  loading="lazy"
                   alt="MPK dalam rapat"
                   className="w-full object-cover aspect-[4/3]"
                 />

@@ -38,7 +38,7 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-3">
             <div className="w-11 h-11 flex items-center justify-center translate-y-[2px]">
               <img
-                src="/images/LOGOMGA.png"
+                src="/images/LOGOMGA.webp"
                 alt="Logo SMAN 1 Margaasih"
                 className="max-h-full max-w-full object-contain"
               />
@@ -52,7 +52,7 @@ export default function Header() {
             />
             <div className="w-11 h-11 flex items-center justify-center translate-y-[0px]">
               <img
-                src="/images/LOGOMPKFINAL.png"
+                src="/images/LOGOMPKFINAL.webp"
                 alt="Logo MPK"
                 className="max-h-full max-w-full object-contain"
               />

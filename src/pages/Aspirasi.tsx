@@ -172,7 +172,8 @@ export default function Aspirasi() {
                 <div className="relative order-first lg:order-none">
                   <div className="absolute -inset-4 bg-gold/5 rounded-2xl blur-2xl" />
                   <img
-                    src="/images/GMYA.png"
+                    src="/images/GMYA.webp"
+                    loading="lazy"
                     alt="GMYA Program"
                     className="relative rounded-xl shadow-lg w-full h-auto object-contain"
                   />
