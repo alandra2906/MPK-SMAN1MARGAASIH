@@ -4,9 +4,11 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Aspirasi() {
-  const [activeTab, setActiveTab] = useState('gmya')
+  const [activeTab, setActiveTab] = useState<'gmya' | 'form' | 'angket'>('gmya')
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const angketIframeRef = useRef<HTMLIFrameElement>(null)
+  const [isAngketLoading, setIsAngketLoading] = useState(true)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -100,6 +102,13 @@ export default function Aspirasi() {
               >
                 <Send size={16} className="mr-2" />
                 Form Aspirasi
+              </TabsTrigger>
+              <TabsTrigger
+                value="angket"
+                className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md"
+              >
+                <ExternalLink size={16} className="mr-2" />
+                Angket Pemilihan
               </TabsTrigger>
             </TabsList>
           </div>
@@ -264,6 +273,84 @@ export default function Aspirasi() {
                   </div>
                 </div>
               </div>
+              </motion.div>
+            )}
+
+            {activeTab === 'angket' && (
+              <motion.div
+                key="angket-content"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="max-w-3xl mx-auto">
+                  <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 shadow-sm">
+                    <h2 className="text-xl font-bold text-dark-green mb-2">
+                      Formulir Angket Pemilihan
+                    </h2>
+                    <p className="text-slate-500 text-sm mb-6">
+                      Silakan isi formulir angket pemilihan di bawah ini.
+                    </p>
+
+                    {/* Gambar PORSENI 2026 */}
+                    <div className="mb-8 rounded-xl overflow-hidden border border-slate-100 shadow-sm">
+                      <img 
+                        src="/images/PORSENI 2026.png" 
+                        loading="lazy"
+                        alt="PORSENI 2026" 
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+
+                    <div className="relative rounded-lg overflow-hidden border border-slate-200 min-h-[965px] bg-white">
+                      {isAngketLoading && (
+                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
+                          <div className="w-10 h-10 border-4 border-slate-100 border-t-goldenrod rounded-full animate-spin mb-4"></div>
+                          <p className="text-xs font-mono-data text-slate-500 uppercase tracking-widest animate-pulse">
+                            Memuat Formulir...
+                          </p>
+                        </div>
+                      )}
+                      <iframe
+                        ref={angketIframeRef}
+                        id="google_form_angket"
+                        onLoad={() => setIsAngketLoading(false)}
+                        aria-label="Angket Pemilihan"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScqWDlMUk612hHA5IwkMJz4diXWPjTPBxglvP6C-DYS-UxLGg/viewform?embedded=true"
+                        className="w-full h-[965px] border-0"
+                      >
+                        <p className="p-6 text-slate-500 text-center">
+                          Browser Anda tidak mendukung iframe. Silakan{' '}
+                          <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScqWDlMUk612hHA5IwkMJz4diXWPjTPBxglvP6C-DYS-UxLGg/viewform?embedded=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-goldenrod hover:underline font-medium"
+                          >
+                            klik di sini
+                          </a>{' '}
+                          untuk mengakses formulir.
+                        </p>
+                      </iframe>
+                    </div>
+
+                    <div className="mt-4 flex items-start gap-3 p-4 bg-vanilla/20 rounded-lg">
+                      <MessageSquare size={18} className="text-goldenrod mt-0.5 shrink-0" />
+                      <div>
+                        <p className="text-sm text-dark-green font-medium">
+                          Butuh bantuan?
+                        </p>
+                        <p className="text-sm text-cal-poly mt-1">
+                          Jika formulir tidak dapat diakses, hubungi kami melalui{' '}
+                          <a href="mailto:mpk.sman1margaasih.official@gmail.com" className="underline hover:text-gold">email</a>{' '}
+                          atau{' '}
+                          <a href="https://www.instagram.com/mpk.1mga/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gold">Instagram</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
