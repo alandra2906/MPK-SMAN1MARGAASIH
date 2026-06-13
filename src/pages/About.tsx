@@ -67,6 +67,7 @@ type ProkerItem = {
   title: string
   tujuan: string
   pelaksanaan: string
+  imgSrc?: string
 }
 
 const allProkerData: ProkerItem[] = [
@@ -81,9 +82,9 @@ const allProkerData: ProkerItem[] = [
   { category: 'bendahara', title: 'Mengadakan Iuran Kas Rutin', tujuan: 'Melatih kedisiplinan dan tanggung jawab seorang anggota dengan membayar iuran kas sebesar Rp.10.000/bulan degan tujuan menambah dan menjaga kestabilan kas MPK.', pelaksanaan: 'Jangka Panjang' },
   { category: 'bendahara', title: 'Mencatat Pengeluaran dan Pemasukan', tujuan: 'Untuk transparansi, mengetahui pengeluaran dan pemasukan dana dengan jelas.', pelaksanaan: 'Jangka Panjang' },
   { category: 'bendahara', title: 'Konsultasi Keuangan Dengan Ketua dan Wakil MPK', tujuan: 'Untuk memastikan pengelolaan dan penggunaan dana MPK berjalan dengan lancar.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi1', title: 'KoPi (Kotak Aspirasi)', tujuan: 'Menampung aspirasi melalui kotak aspirasi yang akan disediakan untuk menampung suara dari siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi1', title: 'GMYA (Give Me Your Aspiration)', tujuan: 'Menampung kritik/saran dari siswa/i SMAN 1 Margaasih mengenai kegiatan dan lomba-lomba untuk acara yang telah diadakan.', pelaksanaan: 'Jangka Panjang' },
-  { category: 'komisi1', title: 'Laman MPK', tujuan: 'Sebagai media informasi dan komunikasi resmi untuk menyampaikan program kerja, kegiatan, serta aspirasi siswa yang mudah diakses oleh seluruh siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi1', title: 'KoPi (Kotak Aspirasi)', tujuan: 'Menampung aspirasi melalui kotak aspirasi yang akan disediakan untuk menampung suara dari siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/KOPI.webp' },
+  { category: 'komisi1', title: 'GMYA (Give Me Your Aspiration)', tujuan: 'Menampung kritik/saran dari siswa/i SMAN 1 Margaasih mengenai kegiatan dan lomba-lomba untuk acara yang telah diadakan.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/GMYA.webp' },
+  { category: 'komisi1', title: 'Laman MPK', tujuan: 'Sebagai media informasi dan komunikasi resmi untuk menyampaikan program kerja, kegiatan, serta aspirasi siswa yang mudah diakses oleh seluruh siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/Laman MPK.webp' },
   { category: 'komisi1', title: 'SAKEDAP (Saran Kegiatan dan Perlombaan)', tujuan: 'Menampung aspirasi siswa/i pra event melalui Google Form yang akan diunggah pada Story Instagram MPK dan OSIS yang sudah disediakan.', pelaksanaan: 'Jangka Panjang' },
   { category: 'komisi1', title: 'PENA (Pesan Anonim)', tujuan: 'Sebagai wadah penyaluran pesan siswa/i SMAN 1 Margaasih secara anonim kepada para pengurus MPK dan OSIS.', pelaksanaan: 'Jangka Pendek' },
   { category: 'komisi2', title: 'Poster Peringatan Hari Besar dan Nasional', tujuan: 'Menumbuhkan rasa nasionalisme dan semangat kebangsaan, berupa poster yang di buat. Di share melalui story Instagram MPK.', pelaksanaan: 'Jangka panjang' },
@@ -138,7 +139,12 @@ export default function About() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
   return (
-    <div className="min-h-screen bg-[#f8fafc] pt-20 pb-0">
+    <motion.div
+      className="min-h-screen bg-[#f8fafc] pt-20 pb-0"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Title */}
         <div className="text-center mb-10">
@@ -278,7 +284,7 @@ export default function About() {
                           <div className="absolute top-0 h-px bg-slate-200 hidden lg:block left-[calc((100%_-_6rem)/8)] w-[calc(75%_+_1.5rem)]" aria-hidden />
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
                             {[
-                              { label: 'Sekretaris 1', name: 'Aulia Panca Oktaviani', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/23.png' },
+                              { label: 'Sekretaris 1', name: 'Aulia Panca Octaviani', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/23.png' },
                               { label: 'Sekretaris 2', name: 'Nadila Puspa Rini', kelas: 'X 10', image: '/images/Dokumentasi foto per orang/16.png' },
                               { label: 'Bendahara 1', name: 'Indri Pratiwi', kelas: 'XI IPS 6', image: '/images/Dokumentasi foto per orang/1.png' },
                               { label: 'Bendahara 2', name: 'Annisa Agustina', kelas: 'X 11', image: '/images/Dokumentasi foto per orang/17.png' }
@@ -295,7 +301,6 @@ export default function About() {
                                       <img
                                         src={(staff as any).image}
                                         alt={staff.name}
-                                        loading="lazy"
                                         className="w-full h-full object-cover"
                                       />
                                     </div>
@@ -337,16 +342,15 @@ export default function About() {
                     </div>
                   </motion.div>
                 )}
-
-              {activeTab === 'proker' && ( /* Rendering kondisional untuk Proker */
-                <motion.div
-                  key="proker"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <h2 className="text-3xl font-bold text-dark-green mb-2 text-center">Program Kerja MPK</h2>
+                {activeTab === 'proker' && ( /* Rendering kondisional untuk Proker */
+                  <motion.div
+                    key="proker"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <h2 className="text-3xl font-bold text-dark-green mb-2 text-center">Program Kerja MPK</h2>
                     <p className="text-slate-500 text-center mb-6 max-w-2xl mx-auto">
                       Inisiatif strategis MPK untuk memajukan kesejahteraan siswa
                     </p>
@@ -368,32 +372,64 @@ export default function About() {
                       ))}
                     </div>
 
+                    {/* Grid Sistem Kartu Proker */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                       {allProkerData
                         .filter((item) => item.category === prokerCategory)
                         .map((item) => (
                           <div
-
                             key={`${item.category}-${item.title}`}
-                            className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left"
+                            className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between h-full text-left"
                           >
-                            <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-2 mb-3">
-                              <h3 className="text-lg sm:text-xl font-bold text-dark-green leading-tight flex-1 min-w-[min(100%,10rem)]">
-                                {item.title}
-                              </h3>
-                              <span className="shrink-0 text-xs font-medium leading-snug text-right px-2.5 py-1.5 rounded-lg bg-goldenrod/10 text-goldenrod border border-goldenrod/20 max-w-[min(100%,14rem)] ml-auto">
-                                Pelaksanaan: {item.pelaksanaan}
-                              </span>
-                            </div>
-                            <p className="text-sm text-slate-600 leading-relaxed mt-auto">
-                              <span className="font-medium text-slate-700">Tujuan:</span> {item.tujuan}
-                            </p>
+                            {item.imgSrc ? (
+                              /* KARTU DENGAN GAMBAR */
+                              <div className="flex flex-col sm:flex-row gap-4 w-full items-start">
+                                {/* Solusi Gambar Presisi 1:1 di Desktop & Mobile */}
+                                <div className="relative w-full sm:w-28 sm:h-28 md:w-32 md:h-32 aspect-square flex-shrink-0 overflow-hidden rounded-xl bg-slate-100">
+                                  <img
+                                    src={item.imgSrc}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                                {/* Konten Teks di Samping Gambar */}
+                                <div className="flex-1 min-w-0 flex flex-col gap-2">
+                                  <h3 className="text-lg font-bold text-dark-green leading-tight break-words">
+                                    {item.title}
+                                  </h3>
+                                  <div>
+                                    <span className="inline-block text-[10px] sm:text-xs font-medium px-2.5 py-1 rounded-md bg-goldenrod/10 text-goldenrod border border-goldenrod/20 whitespace-nowrap">
+                                      Pelaksanaan: {item.pelaksanaan}
+                                    </span>
+                                  </div>
+                                  <p className="text-sm text-slate-600 leading-relaxed mt-1">
+                                    <span className="font-medium text-slate-700">Tujuan:</span> {item.tujuan}
+                                  </p>
+                                </div>
+                              </div>
+                            ) : (
+                              /* KARTU TANPA GAMBAR (Full Teks, Tidak Ada Ruang Kosong Sebelah Kiri) */
+                              <div className="w-full flex flex-col gap-2 h-full justify-between">
+                                <div className="flex flex-col gap-2">
+                                  <h3 className="text-lg font-bold text-dark-green leading-tight break-words">
+                                    {item.title}
+                                  </h3>
+                                  <div>
+                                    <span className="inline-block text-[10px] sm:text-xs font-medium px-2.5 py-1 rounded-md bg-goldenrod/10 text-goldenrod border border-goldenrod/20 whitespace-nowrap">
+                                      Pelaksanaan: {item.pelaksanaan}
+                                    </span>
+                                  </div>
+                                </div>
+                                <p className="text-sm text-slate-600 leading-relaxed mt-3">
+                                  <span className="font-medium text-slate-700">Tujuan:</span> {item.tujuan}
+                                </p>
+                              </div>
+                            )}
                           </div>
                         ))}
                     </div>
-                </motion.div>
-              )}
-
+                  </motion.div>
+                )}
               {/* Komisi 1-4 */}
               {komisiData.map((komisi) => (
                 activeTab === komisi.id && (
@@ -408,7 +444,6 @@ export default function About() {
                       <div className="relative max-w-5xl mx-auto mb-10 h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                         <motion.img 
                           src={(komisi as any).groupImage}
-                          loading="lazy"
                           alt={komisi.name} 
                           className="absolute inset-0 w-full h-full object-cover"
                           animate={{ scale: [1, 1.1] }}
@@ -431,7 +466,7 @@ export default function About() {
                           >
                             <div className="w-32 h-32 rounded-full bg-dark-green text-white flex items-center justify-center text-4xl font-bold shrink-0 overflow-hidden border-4 border-slate-50 shadow-md mb-3">
                               {(member as any).image ? (
-                                <img src={(member as any).image} alt={member.name} loading="lazy" className="w-full h-full object-cover" />
+                                <img src={(member as any).image} alt={member.name} className="w-full h-full object-cover" />
                               ) : (
                                 member.name.charAt(0)
                               )}
@@ -454,6 +489,6 @@ export default function About() {
           </Tabs>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { MessageSquare, Send, ExternalLink } from 'lucide-react'
+import { MessageSquare, Send, ExternalLink, ClipboardCopy, MessageCircleQuestion } from 'lucide-react'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -67,7 +67,12 @@ export default function Aspirasi() {
   }, [activeTab])
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] pt-20 pb-0">
+    <motion.div
+      className="min-h-screen bg-[#f8fafc] pt-20 pb-0"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Title */}
         <div className="text-center mb-10 reveal">
@@ -86,32 +91,34 @@ export default function Aspirasi() {
         </div>
 
         {/* Tabs */}
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full relative">
-          <div className="flex justify-center mb-8">
-            <TabsList className="bg-white border border-slate-200 p-1 rounded-lg h-auto">
-              <TabsTrigger
-                value="gmya"
-                className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md"
-              >
-                <MessageSquare size={16} className="mr-2" />
-                Apa itu GMYA
-              </TabsTrigger>
-              <TabsTrigger
-                value="form"
-                className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md"
-              >
-                <Send size={16} className="mr-2" />
-                Form Aspirasi
-              </TabsTrigger>
-              <TabsTrigger
-                value="angket"
-                className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md"
-              >
-                <ExternalLink size={16} className="mr-2" />
-                Angket Pemilihan
-              </TabsTrigger>
-            </TabsList>
-          </div>
+         <Tabs value={activeTab} 
+          onValueChange={(value) => setActiveTab(value as 'gmya' | 'form' | 'angket')} 
+          className="w-full relative"
+>       
+        {/* 1. Kontainer Utama: Menyembunyikan scrollbar bawaan dengan utility class khusus */}
+        <div className="w-full overflow-x-auto flex justify-start md:justify-center mb-8 px-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          
+          {/* 2. TabsList: Rata kiri secara default di mobile, otomatis rata tengah di layar komputer (md:justify-center) */}
+          <TabsList className="bg-white border border-slate-200 p-1 rounded-lg h-auto flex flex-row justify-start md:justify-center whitespace-nowrap">
+            
+            <TabsTrigger value="gmya" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
+              {/* Memunculkan kembali icon, sesuaikan dengan komponen icon aslimu (contoh: Lucide Icon) */}
+              <MessageSquare size={16} className="mr-2" /> 
+              Apa itu GMYA
+            </TabsTrigger>
+
+            <TabsTrigger value="form" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
+              <Send size={16} className="mr-2" />
+              Form Aspirasi
+            </TabsTrigger>
+
+            <TabsTrigger value="angket" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
+              <ClipboardCopy size={16} className="mr-2" />
+              Angket Pemilihan
+            </TabsTrigger>
+
+          </TabsList>
+        </div>
 
           {/* Apa itu GMYA */}
           <AnimatePresence mode="wait">
@@ -246,7 +253,7 @@ export default function Aspirasi() {
                   </div>
 
                   <div className="mt-4 flex items-start gap-3 p-4 bg-vanilla/20 rounded-lg">
-                    <MessageSquare size={18} className="text-goldenrod mt-0.5 shrink-0" />
+                    <MessageCircleQuestion size={18} className="text-goldenrod mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm text-dark-green font-medium">
                         Butuh bantuan?
@@ -336,7 +343,7 @@ export default function Aspirasi() {
                     </div>
 
                     <div className="mt-4 flex items-start gap-3 p-4 bg-vanilla/20 rounded-lg">
-                      <MessageSquare size={18} className="text-goldenrod mt-0.5 shrink-0" />
+                      <MessageCircleQuestion size={18} className="text-goldenrod mt-0.5 shrink-0" />
                       <div>
                         <p className="text-sm text-dark-green font-medium">
                           Butuh bantuan?
@@ -356,6 +363,6 @@ export default function Aspirasi() {
           </AnimatePresence>
         </Tabs>
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -12,7 +12,7 @@ const alumniList = [
 ]
 
 const galleryImages = [
-  { src: '/images/IMG-20251006-WA0120.jpg.webp', caption: 'Pasca Pemilihan Ketua dan Wakil Ketua MPK' },
+  { src: '/images/IMG-20251006-WA0120.jpg.webp', caption: 'Pasca Pemilihan Ketua dan Wakil Ketua MPK Periode 2025/2026' },
   { src: '/images/IMG-20260131-WA0009.jpg.webp', caption: 'Foto Bersama Pasca Sidang Pleno I 2026' },
   { src: '/images/IMG-20260131-WA0015.jpg.webp', caption: 'Foto Bersama Pasca Sidang Pleno I 2026' },
   { src: '/images/IMG-20260131-WA0038.jpg.webp', caption: 'Foto Bersama OSIS & MPK pasca Sidang Pleno I 2026' },
@@ -222,7 +222,7 @@ export default function Gallery() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeModal}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-10 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 sm:p-10 backdrop-blur-sm"
           >
             <button
               onClick={closeModal}
@@ -234,10 +234,10 @@ export default function Gallery() {
 
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-[110]"
+              className="absolute left-8 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-[110]"
               aria-label="Previous image"
             >
-              <ChevronLeft size={32} />
+              <ChevronLeft size={25} />
             </button>
 
             <div className="relative max-w-5xl w-full flex flex-col items-center">
@@ -265,10 +265,10 @@ export default function Gallery() {
 
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-[110]"
+              className="absolute right-8 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-[110]"
               aria-label="Next image"
             >
-              <ChevronRight size={32} />
+              <ChevronRight size={25} />
             </button>
           </motion.div>
         )}

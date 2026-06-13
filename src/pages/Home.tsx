@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
-import { ChevronDown, Target, Eye } from 'lucide-react'
+import { ChevronDown, Target, Eye, ExternalLink } from 'lucide-react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 
 export default function Home() {
@@ -25,7 +25,9 @@ export default function Home() {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('tentang-mpk')
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' })
+      const offset = 148
+      const top = Math.max(aboutSection.getBoundingClientRect().top + window.pageYOffset - offset, 0)
+      window.scrollTo({ top, behavior: 'smooth' })
     }
   }
 
@@ -181,15 +183,16 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 mt-6">
                 <button
                   onClick={scrollToAbout}
-                  className="px-6 py-3 bg-goldenrod hover:bg-gold text-white font-semibold rounded-md transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-goldenrod/20"
+                  className="relative z-10 inline-flex items-center gap-2 px-6 py-3 bg-goldenrod hover:bg-gold text-white font-semibold rounded-md transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-goldenrod/20"
                 >
-                  Jelajahi MPK
+                  Apa itu MPK?
                 </button>
                 <Link
                   to="/aspirasi"
-                  className="px-6 py-3 border border-slate-600 hover:border-gold text-slate-300 hover:text-gold font-semibold rounded-md transition-all duration-200"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-slate-600 hover:border-gold text-slate-300 hover:text-gold font-semibold rounded-md transition-all duration-200"
                 >
                   Sampaikan Aspirasi
+                  <ExternalLink size={16} className="shrink-0" />
                 </Link>
               </div>
             </div>
@@ -246,7 +249,7 @@ export default function Home() {
                 to="/about"
                 className="inline-flex items-center gap-2 mt-6 text-goldenrod hover:text-gold font-semibold transition-colors"
               >
-                Pelajari lebih lanjut
+                Pelajari lebih lanjut tentang MPK
                 <span className="text-lg">→</span>
               </Link>
             </div>
@@ -259,12 +262,13 @@ export default function Home() {
                   alt="MPK dalam rapat"
                   className="w-full object-cover aspect-[4/3]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-green/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-green/50 via-transparent to-transparent" />
                 <Link
                   to="/gallery"
-                  className="absolute bottom-4 right-4 px-4 py-2 bg-gray-500/30 hover:bg-gray-500/50 text-white text-xs sm:text-sm font-semibold rounded-md transition-all duration-200 hover:scale-[1.025] shadow-lg z-10"
+                  className="absolute bottom-4 right-4 inline-flex items-center gap-2 px-4 py-2 bg-gray-500/30 hover:bg-gray-500/50 text-white text-xs sm:text-sm font-semibold rounded-md transition-all duration-200 hover:scale-[1.025] shadow-lg z-10"
                 >
                   Jelajahi Journey MPK
+                  <ExternalLink size={16} className="shrink-0" />
                 </Link>
               </div>
             </div>
@@ -345,14 +349,14 @@ export default function Home() {
           </h2>
           <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
             Setiap suara penting. Lewat program GMYA (Give Me Your Aspiration), kamu bisa menyampaikan
-            aspirasi, kritik, dan saran secara mudah dan transparan.
+            aspirasi, kritik, dan saran secara mudah dan transparan kepada pihak yang ditujukan.
           </p>
           <Link
             to="/aspirasi"
             className="inline-flex items-center gap-2 px-8 py-4 bg-dark-green hover:bg-cal-poly text-white font-semibold rounded-md transition-all duration-200 hover:scale-[1.02] shadow-xl"
           >
             Sampaikan Aspirasimu
-            <span>→</span>
+            <ExternalLink size={16} className="shrink-0" />
           </Link>
         </div>
       </section>
