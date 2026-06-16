@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
-import { MessageSquare, Send, ExternalLink, ClipboardCopy, MessageCircleQuestion } from 'lucide-react'
+import { MessageSquare, Send, ExternalLink, ClipboardCopy, MessageCircleQuestion, Award } from 'lucide-react'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Aspirasi() {
-  const [activeTab, setActiveTab] = useState<'gmya' | 'form' | 'angket'>('gmya')
+  const [activeTab, setActiveTab] = useState<'gmya' | 'form' | 'sakedap' | 'angket'>('gmya')
   const iframeRef = useRef<HTMLIFrameElement>(null)
+  const sakedapIframeRef = useRef<HTMLIFrameElement>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [isSakedapLoading, setIsSakedapLoading] = useState(true)
   const angketIframeRef = useRef<HTMLIFrameElement>(null)
   const [isAngketLoading, setIsAngketLoading] = useState(true)
 
@@ -32,9 +34,11 @@ export default function Aspirasi() {
 
   // Logic from Zoho script to handle referrer tracking
   useEffect(() => {
-    if (activeTab === 'form' && iframeRef.current) {
+    const zohoFrame = activeTab === 'form' ? iframeRef.current : activeTab === 'sakedap' ? sakedapIframeRef.current : null
+
+    if ((activeTab === 'form' || activeTab === 'sakedap') && zohoFrame) {
       try {
-        const zf_frame = iframeRef.current
+        const zf_frame = zohoFrame
         let ifrmSrc = zf_frame.src
 
         if (!/([?&])referrername=/.test(ifrmSrc)) {
@@ -59,7 +63,11 @@ export default function Aspirasi() {
           }
         }
         if (zf_frame.src !== ifrmSrc) {
-          setIsLoading(true)
+          if (activeTab === 'form') {
+            setIsLoading(true)
+          } else if (activeTab === 'sakedap') {
+            setIsSakedapLoading(true)
+          }
           zf_frame.src = ifrmSrc
         }
       } catch (e) { }
@@ -92,35 +100,39 @@ export default function Aspirasi() {
 
         {/* Tabs */}
          <Tabs value={activeTab} 
-          onValueChange={(value) => setActiveTab(value as 'gmya' | 'form' | 'angket')} 
+          onValueChange={(value) => setActiveTab(value as 'gmya' | 'form' | 'sakedap' | 'angket')} 
           className="w-full relative"
->       
-        {/* 1. Kontainer Utama: Menyembunyikan scrollbar bawaan dengan utility class khusus */}
-        <div className="w-full overflow-x-auto flex justify-start md:justify-center mb-8 px-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-          
-          {/* 2. TabsList: Rata kiri secara default di mobile, otomatis rata tengah di layar komputer (md:justify-center) */}
-          <TabsList className="bg-white border border-slate-200 p-1 rounded-lg h-auto flex flex-row justify-start md:justify-center whitespace-nowrap">
+         >      
+          {/* 1. Kontainer Utama: Menyembunyikan scrollbar bawaan dengan utility class khusus */}
+          <div className="w-full overflow-x-auto flex justify-start md:justify-center mb-8 px-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             
-            <TabsTrigger value="gmya" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
-              {/* Memunculkan kembali icon, sesuaikan dengan komponen icon aslimu (contoh: Lucide Icon) */}
-              <MessageSquare size={16} className="mr-2" /> 
-              Apa itu GMYA
-            </TabsTrigger>
+            {/* 2. TabsList: Rata kiri secara default di mobile, otomatis rata tengah di layar komputer (md:justify-center) */}
+            <TabsList className="bg-white border border-slate-200 p-1 rounded-lg h-auto flex flex-row justify-start md:justify-center whitespace-nowrap">
+              
+              <TabsTrigger value="gmya" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
+                <MessageSquare size={16} className="mr-2" /> 
+                Tentang GMYA & SAKEDAP
+              </TabsTrigger>
 
-            <TabsTrigger value="form" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
-              <Send size={16} className="mr-2" />
-              Form Aspirasi
-            </TabsTrigger>
+              <TabsTrigger value="form" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
+                <Send size={16} className="mr-2" />
+                Form GMYA
+              </TabsTrigger>
 
-            <TabsTrigger value="angket" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
-              <ClipboardCopy size={16} className="mr-2" />
-              Angket Pemilihan
-            </TabsTrigger>
+              <TabsTrigger value="sakedap" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
+                <Award size={16} className="mr-2" />
+                Form SAKEDAP
+              </TabsTrigger>
 
-          </TabsList>
-        </div>
+              <TabsTrigger value="angket" className="px-6 py-2.5 text-sm data-[state=active]:bg-dark-green data-[state=active]:text-white rounded-md flex items-center gap-2">
+                <ClipboardCopy size={16} className="mr-2" />
+                Angket Pemilihan
+              </TabsTrigger>
 
-          {/* Apa itu GMYA */}
+            </TabsList>
+          </div>
+
+          {/* Tentang GMYA & SAKEDAP */}
           <AnimatePresence mode="wait">
             {activeTab === 'gmya' && (
               <motion.div
@@ -129,76 +141,110 @@ export default function Aspirasi() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.3 }}
+                className="max-w-4xl mx-auto"
               >
-              <div className="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-vanilla text-goldenrod text-xs font-semibold uppercase tracking-wider mb-4">
-                    Program Unggulan
-                  </div>
-                  <h2 className="text-3xl font-bold text-dark-green mb-4">
-                    GMYA (Give Me Your Aspiration)
-                  </h2>
-                  <div className="space-y-4 text-slate-600 leading-relaxed">
-                    <p>
-                      <strong className="text-dark-green">GMYA (Give Me Your Aspiration)</strong>{' '}
-                      adalah salah satu program kerja unggulan komisi 1 yang dirancang
-                      menjadi wadah bagi seluruh siswa untuk menyampaikan aspirasi,
-                      kritik, saran, dan masukan terkait sekolah secara
-                      transparan dan terstruktur.
-                    </p>
-                    <p>
-                      Melalui GMYA, siswa dapat menyampaikan berbagai hal mulai dari
-                      fasilitas sekolah, kebijakan akademik, kegiatan ekstrakurikuler,
-                      hingga kesejahteraan siswa lainnya. Setiap aspirasi yang masuk
-                      akan ditindaklanjuti oleh komisi terkait dan diberikan
-                      respons yang jelas.
-                    </p>
-                    <p>
-                      Program ini mencerminkan komitmen MPK untuk mendengarkan
-                      setiap suara siswa dan mengubahnya menjadi aksi nyata demi
-                      perbaikan berkelanjutan di lingkungan sekolah.
-                    </p>
+                <div className="flex flex-col gap-6">
+                  {/* Badge Program Unggulan */}
+                  <div className="self-start inline-flex items-center gap-2 px-3 py-1 rounded-full bg-vanilla/50 text-goldenrod text-xs font-semibold uppercase tracking-wider">
+                    Program Unggulan Komisi 1
                   </div>
 
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-700">
-                      <span className="w-2 h-2 rounded-full bg-goldenrod" />
-                      Aspirasi Transparan
+                  {/* Stacked Cards Layout (Terinspirasi konsep image_ea5066.jpg) */}
+                  <div className="grid md:grid-cols-2 gap-6 items-stretch">
+                    
+                    {/* Card 1: GMYA */}
+                    <div className="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-dark-green/5 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform" />
+                      <div>
+                        <div className="flex items-center gap-4 mb-5">
+                          <div className="w-16 h-16 rounded-xl bg-[#e2ece9] p-1.5 flex items-center justify-center shrink-0 border border-dark-green/10">
+                            <img 
+                              src="/images/GMYA.webp" 
+                              alt="GMYA Logo" 
+                              className="w-full h-full object-contain rounded-lg" // <-- Ditambahkan rounded-lg di sini
+                            />
+                          </div>
+                          <div>
+                            <span className="text-xs font-bold text-goldenrod uppercase tracking-wider">Wadah Suara Siswa</span>
+                            <h3 className="text-xl font-bold text-dark-green">GMYA</h3>
+                          </div>
+                        </div>
+                        <h4 className="text-sm font-semibold text-slate-700 mb-2">Give Me Your Aspiration</h4>
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                          Wadah resmi bagi seluruh siswa untuk menyampaikan aspirasi, kritik, saran, dan masukan terkait perkembangan sekolah secara transparan dan terstruktur.
+                        </p>
+                      </div>
+                      <div className="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+                        <button 
+                          onClick={() => setActiveTab('form')} 
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-dark-green hover:text-goldenrod transition-colors"
+                        >
+                          Buka Formulir GMYA <ExternalLink size={12} />
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-700">
-                      <span className="w-2 h-2 rounded-full bg-goldenrod" />
-                      Tindak Lanjut Jelas
+
+                    {/* Card 2: SAKEDAP */}
+                    <div className="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-goldenrod/5 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform" />
+                      <div>
+                        <div className="flex items-center gap-4 mb-5">
+                          <div className="w-16 h-16 rounded-xl bg-[#fcf8e3] p-1.5 flex items-center justify-center shrink-0 border border-goldenrod/10">
+                            <img 
+                              src="/images/SAKEDAP.webp" 
+                              alt="SAKEDAP Logo" 
+                              className="w-full h-full object-contain rounded-lg" // <-- Ditambahkan rounded-lg di sini
+                              onError={(e)=>{e.currentTarget.src="/images/GMYA.webp"}} 
+                            />
+                          </div>
+                          <div>
+                            <span className="text-xs font-bold text-goldenrod uppercase tracking-wider">Evaluasi Event</span>
+                            <h3 className="text-xl font-bold text-dark-green">SAKEDAP</h3>
+                          </div>
+                        </div>
+                        <h4 className="text-sm font-semibold text-slate-700 mb-2">Saran Kegiatan & Perlombaan</h4>
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                          Wadah khusus untuk menampung kesan, pesan, ide kreatif, serta umpan balik siswa selama dan sesudah kegiatan sekolah maupun perlombaan berlangsung.
+                        </p>
+                      </div>
+                      <div className="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+                        <button 
+                          onClick={() => setActiveTab('sakedap')} 
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-dark-green hover:text-goldenrod transition-colors"
+                        >
+                          Buka Formulir SAKEDAP <ExternalLink size={12} />
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-700">
-                      <span className="w-2 h-2 rounded-full bg-goldenrod" />
-                      Akses untuk Semua Siswa
+
+                  </div>
+
+                  {/* Kesimpulan & Core Values di bagian bawah */}
+                  <div className="mt-4 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                    <p className="text-slate-600 text-sm leading-relaxed text-center max-w-2xl mx-auto mb-6">
+                      Kedua program ini mencerminkan komitmen penuh <strong className="text-dark-green">MPK SMAN 1 Margaasih</strong> untuk mendengarkan setiap suara siswa dan mengubahnya menjadi aksi nyata demi perbaikan berkelanjutan nyata di lingkungan sekolah.
+                    </p>
+                    
+                    <div className="flex flex-wrap justify-center gap-3">
+                      <div className="flex items-center gap-2 px-4 py-2 bg-[#f8fafc] border border-slate-200/60 rounded-xl text-xs font-medium text-slate-700">
+                        <span className="w-2 h-2 rounded-full bg-goldenrod" />
+                        Aspirasi Transparan
+                      </div>
+                      <div className="flex items-center gap-2 px-4 py-2 bg-[#f8fafc] border border-slate-200/60 rounded-xl text-xs font-medium text-slate-700">
+                        <span className="w-2 h-2 rounded-full bg-goldenrod" />
+                        Tindak Lanjut Jelas
+                      </div>
+                      <div className="flex items-center gap-2 px-4 py-2 bg-[#f8fafc] border border-slate-200/60 rounded-xl text-xs font-medium text-slate-700">
+                        <span className="w-2 h-2 rounded-full bg-goldenrod" />
+                        Akses untuk Semua Siswa
+                      </div>
                     </div>
                   </div>
 
-                  <button
-                    onClick={() => setActiveTab('form')}
-                    className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-dark-green hover:bg-cal-poly text-white font-semibold rounded-md transition-all hover:scale-[1.02]"
-                  >
-                    Isi Form Aspirasi Sekarang
-                    <ExternalLink size={16} />
-                  </button>
                 </div>
-
-                {/* Right: Image */}
-                <div className="relative order-first lg:order-none">
-                  <div className="absolute -inset-4 bg-gold/5 rounded-2xl blur-2xl" />
-                  <img
-                    src="/images/GMYA.webp"
-                    loading="lazy"
-                    alt="GMYA Program"
-                    className="relative rounded-xl shadow-lg w-full h-auto object-contain"
-                  />
-                </div>
-              </div>
               </motion.div>
             )}
 
-          {/* Form Aspirasi */}
             {activeTab === 'form' && (
               <motion.div
                 key="form-content"
@@ -210,7 +256,7 @@ export default function Aspirasi() {
               <div className="max-w-3xl mx-auto">
                 <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 shadow-sm">
                   <h2 className="text-xl font-bold text-dark-green mb-2">
-                    Formulir Penyampaian Aspirasi GMYA
+                    Formulir Penyampaian Aspirasi GMYA (Give Me Your Aspiration)
                   </h2>
                   <p className="text-slate-500 text-sm mb-6">
                     Silakan isi formulir di bawah ini untuk menyampaikan aspirasi,
@@ -234,7 +280,7 @@ export default function Aspirasi() {
                       onLoad={() => setIsLoading(false)}
                       aria-label="GMYA (Give Me Your Aspiration) 2025/2026"
                       src="https://forms.zohopublic.com/mpksman1margaasihofficialgm1/form/GMYAGiveMeYourAspiration/formperma/HXGN8-A0a1AdYRagRQdxWJNkq7Q_PsXxg6jKARYtT9o?zf_enablecamera=true"
-                      className="w-full h-[800px] border-0"
+                      className="w-full h-[1025px] border-0"
                       allow="camera"
                     >
                       <p className="p-6 text-slate-500 text-center">
@@ -283,6 +329,76 @@ export default function Aspirasi() {
               </motion.div>
             )}
 
+            {activeTab === 'sakedap' && (
+              <motion.div
+                key="sakedap-content"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="max-w-3xl mx-auto">
+                  <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 shadow-sm">
+                    <h2 className="text-xl font-bold text-dark-green mb-2">
+                      Formulir SAKEDAP (Saran Kegiatan DAn Perlombaan)
+                    </h2>
+                    <p className="text-slate-500 text-sm mb-6">
+                      Gunakan formulir ini untuk memberikan kesan dan pesan terkait
+                      perlombaan atau event yang telah dilaksanakan.
+                    </p>
+
+                    <div className="relative rounded-lg overflow-hidden border border-slate-200 min-h-[550px] bg-white">
+                      {isSakedapLoading && (
+                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
+                          <div className="w-10 h-10 border-4 border-slate-100 border-t-goldenrod rounded-full animate-spin mb-4"></div>
+                          <p className="text-xs font-mono-data text-slate-500 uppercase tracking-widest animate-pulse">
+                            Memuat Formulir SAKEDAP...
+                          </p>
+                        </div>
+                      )}
+                      <iframe
+                        ref={sakedapIframeRef}
+                        id="ziframe_sakedap"
+                        onLoad={() => setIsSakedapLoading(false)}
+                        aria-label="SAKEDAP (Saran Kegiatan dan Perlombaan) 2025/2026"
+                        src="https://forms.zohopublic.com/mpksman1margaasihofficialgm1/form/SAKEDAPSaranKegiatandanPerlombaan/formperma/cKALA0mVLFk66ZBsQiK4G1j537qAsVXJTvsSmxXqmkc?zf_enablecamera=true"
+                        className="w-full h-[910px] border-0"
+                        allow="camera"
+                      >
+                        <p className="p-6 text-slate-500 text-center">
+                          Browser Anda tidak mendukung iframe. Silakan{' '}
+                          <a
+                            href="https://forms.zohopublic.com/mpksman1margaasihofficialgm1/form/SAKEDAPSaranKegiatandanPerlombaan/formperma/cKALA0mVLFk66ZBsQiK4G1j537qAsVXJTvsSmxXqmkc?zf_enablecamera=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-goldenrod hover:underline font-medium"
+                          >
+                            klik di sini
+                          </a>{' '}
+                          untuk mengakses formulir.
+                        </p>
+                      </iframe>
+                    </div>
+
+                    <div className="mt-4 flex items-start gap-3 p-4 bg-vanilla/20 rounded-lg">
+                      <MessageCircleQuestion size={18} className="text-goldenrod mt-0.5 shrink-0" />
+                      <div>
+                        <p className="text-sm text-dark-green font-medium">
+                          Butuh bantuan?
+                        </p>
+                        <p className="text-sm text-cal-poly mt-1">
+                          Jika formulir tidak dapat diakses, hubungi kami melalui{' '}
+                          <a href="mailto:mpk.sman1margaasih.official@gmail.com" className="underline hover:text-gold">email</a>{' '}
+                          atau{' '}
+                          <a href="https://www.instagram.com/mpk.1mga/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gold">Instagram</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
             {activeTab === 'angket' && (
               <motion.div
                 key="angket-content"
@@ -304,7 +420,6 @@ export default function Aspirasi() {
                     <div className="mb-8 rounded-xl overflow-hidden border border-slate-100 shadow-sm">
                       <img 
                         src="/images/PORSENI 2026.png" 
-                        loading="lazy"
                         alt="PORSENI 2026" 
                         className="w-full h-auto object-cover"
                       />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
@@ -85,7 +85,7 @@ const allProkerData: ProkerItem[] = [
   { category: 'komisi1', title: 'KoPi (Kotak Aspirasi)', tujuan: 'Menampung aspirasi melalui kotak aspirasi yang akan disediakan untuk menampung suara dari siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/KOPI.webp' },
   { category: 'komisi1', title: 'GMYA (Give Me Your Aspiration)', tujuan: 'Menampung kritik/saran dari siswa/i SMAN 1 Margaasih mengenai kegiatan dan lomba-lomba untuk acara yang telah diadakan.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/GMYA.webp' },
   { category: 'komisi1', title: 'Laman MPK', tujuan: 'Sebagai media informasi dan komunikasi resmi untuk menyampaikan program kerja, kegiatan, serta aspirasi siswa yang mudah diakses oleh seluruh siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/Laman MPK.webp' },
-  { category: 'komisi1', title: 'SAKEDAP (Saran Kegiatan dan Perlombaan)', tujuan: 'Menampung aspirasi siswa/i pra event melalui Google Form yang akan diunggah pada Story Instagram MPK dan OSIS yang sudah disediakan.', pelaksanaan: 'Jangka Panjang' },
+  { category: 'komisi1', title: 'SAKEDAP (Saran Kegiatan DAn Perlombaan)', tujuan: 'Menampung aspirasi siswa/i pasca event melalui formulir yang akan disediakan pada laman MPK yang akan diunggah pada Story Instagram MPK dan OSIS yang sudah disediakan.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/SAKEDAP.webp' },
   { category: 'komisi1', title: 'PENA (Pesan Anonim)', tujuan: 'Sebagai wadah penyaluran pesan siswa/i SMAN 1 Margaasih secara anonim kepada para pengurus MPK dan OSIS.', pelaksanaan: 'Jangka Pendek' },
   { category: 'komisi2', title: 'Poster Peringatan Hari Besar dan Nasional', tujuan: 'Menumbuhkan rasa nasionalisme dan semangat kebangsaan, berupa poster yang di buat. Di share melalui story Instagram MPK.', pelaksanaan: 'Jangka panjang' },
   { category: 'komisi2', title: 'Lebih Mengaktifkan Media Sosial (Instagram)', tujuan: 'Mendokumentasikan setiap kegiatan yang berhubungan dengan OSIS.', pelaksanaan: 'Jangka Panjang' },
@@ -225,20 +225,24 @@ export default function About() {
                       Periode 2025 / 2026
                     </p>
 
-                    <div className="max-w-5xl mx-auto px-4">
-                      <div className="flex flex-col items-center mb-0">
+                    <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
+                      {/* 1. Pembina (Tingkat 0) */}
+                      <div className="flex flex-col items-center">
                         <div className="bg-white border border-slate-200 rounded-xl py-3 px-4 text-center shadow-sm w-52 relative z-10">
                           <p className="text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">Pembina MPK</p>
                           <p className="font-bold text-dark-green text-base leading-tight">Adang Cucu Cahyana, S.Pd.</p>
                         </div>
-                        <div className="w-px h-6 sm:h-12 bg-slate-200"></div>
+                        <div className="w-0.5 h-8 sm:h-8 bg-slate-400" aria-hidden="true" />
                       </div>
 
-                      <div className="relative max-w-4xl mx-auto mb-0">
-                        <div className="absolute top-0 h-px bg-slate-200 hidden sm:block left-[calc((100%_-_3rem)/4)] w-[calc(50%_+_1.5rem)]" aria-hidden />
+                      {/* 2. Ketua & Wakil (Tingkat 1) */}
+                      <div className="relative w-full max-w-4xl">
+                        {/* Garis Horizontal Penghubung Ketua-Wakil (Hanya muncul di sm: keatas) */}
+                        <div className="absolute top-0 left-[calc((100%_-_3rem)/4)] w-[calc(50%_+_1.5rem)] h-0.5 bg-slate-400 hidden sm:block" aria-hidden="true" />
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12 relative">
                           <div className="flex flex-col items-center">
-                            <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block"></div>
+                            {/* Garis vertikal penghubung ke horizontal di atas */}
+                            <div className="w-0.5 h-6 sm:h-8 shrink-0 bg-slate-400 hidden sm:block" aria-hidden="true" />
                             <motion.div 
                               whileHover={{ scale: 1.03 }}
                               className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[260px] w-full"
@@ -256,7 +260,8 @@ export default function About() {
                             </motion.div>
                           </div>
                           <div className="flex flex-col items-center">
-                            <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block"></div>
+                            {/* Garis vertikal penghubung ke horizontal di atas */}
+                            <div className="w-0.5 h-6 sm:h-8 shrink-0 bg-slate-400 hidden sm:block" aria-hidden="true" />
                             <motion.div 
                               whileHover={{ scale: 1.03 }}
                               className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center min-h-[260px] w-full"
@@ -276,70 +281,97 @@ export default function About() {
                         </div>
                       </div>
 
-                      <div className="mt-4 sm:mt-6">
+                      {/* 3. Sekretaris & Bendahara (Tingkat 2) */}
                         <div className="flex justify-center">
-                          <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block" />
-                        </div>
-                        <div className="relative mb-4">
-                          <div className="absolute top-0 h-px bg-slate-200 hidden lg:block left-[calc((100%_-_6rem)/8)] w-[calc(75%_+_1.5rem)]" aria-hidden />
-                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-                            {[
-                              { label: 'Sekretaris 1', name: 'Aulia Panca Octaviani', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/23.png' },
-                              { label: 'Sekretaris 2', name: 'Nadila Puspa Rini', kelas: 'X 10', image: '/images/Dokumentasi foto per orang/16.png' },
-                              { label: 'Bendahara 1', name: 'Indri Pratiwi', kelas: 'XI IPS 6', image: '/images/Dokumentasi foto per orang/1.png' },
-                              { label: 'Bendahara 2', name: 'Annisa Agustina', kelas: 'X 11', image: '/images/Dokumentasi foto per orang/17.png' }
-                            ].map((staff, idx) => (
-                              <div key={idx} className="flex flex-col items-center">
-                                <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden lg:block"></div>
-                                <motion.div 
-                                  whileHover={{ scale: 1.03 }}
-                                  className="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center w-full h-full min-h-[210px]"
-                                >
-                                  <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">{staff.label}</p>
-                                  {(staff as any).image ? (
-                                    <div className="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-slate-200 shadow-sm bg-slate-50">
-                                      <img
-                                        src={(staff as any).image}
-                                        alt={staff.name}
-                                        className="w-full h-full object-cover"
-                                      />
-                                    </div>
+                          <div className="w-0.5 h-6 sm:h-6 bg-slate-400" aria-hidden="true" />
+                      </div>
+                      <div className="relative w-full">
+                        {/* Garis Horizontal Penghubung 4 Card (Hanya muncul di lg: keatas) */}
+                        <div className="absolute top-0 left-[11.6%] right-[11.4%] h-0.5 bg-slate-400 hidden lg:block" aria-hidden="true" />
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 relative">
+                          {[
+                            { label: 'Sekretaris 1', name: 'Aulia Panca Octaviani', kelas: 'XI IPA 1', image: '/images/Dokumentasi foto per orang/23.png' },
+                            { label: 'Sekretaris 2', name: 'Nadila Puspa Rini', kelas: 'X 10', image: '/images/Dokumentasi foto per orang/16.png' },
+                            { label: 'Bendahara 1', name: 'Indri Pratiwi', kelas: 'XI IPS 6', image: '/images/Dokumentasi foto per orang/1.png' },
+                            { label: 'Bendahara 2', name: 'Annisa Agustina', kelas: 'X 11', image: '/images/Dokumentasi foto per orang/17.png' }
+                          ].map((staff, idx) => (
+                            <div key={idx} className="flex flex-col items-center">
+                              <div className="w-0.5 h-6 lg:h-6 bg-slate-400" aria-hidden="true" />
+                              <motion.div 
+                                whileHover={{ scale: 1.03 }}
+                                className="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center w-full h-full min-h-[210px]"
+                              >
+                                <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">{staff.label}</p>
+                                <div className="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-slate-200 shadow-sm bg-slate-50">
+                                  {staff.image ? (
+                                    <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
                                   ) : (
-                                    <p className="w-24 h-24 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-4xl font-bold shrink-0 mb-3">
+                                    <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-slate-600">
                                       {staff.name.charAt(0)}
-                                    </p>
+                                    </div>
                                   )}
-                                  <p className="font-bold text-dark-green text-base leading-tight mb-1">{staff.name}</p>
-                                  <p className="text-slate-500 text-xs">{staff.kelas}</p>
-                                </motion.div>
-                              </div>
-                            ))} 
-                          </div>
-                        </div>
-
-                        <div className="flex justify-center">
-                          <div className="w-px h-6 sm:h-12 shrink-0 bg-slate-200 hidden sm:block"></div>
-                        </div>
-                        <div className="relative">
-                          <div className="absolute top-0 h-px bg-slate-200 hidden lg:block left-[calc((100%_-_3rem)/8)] w-[calc(75%_+_0.75rem)]" aria-hidden />
-                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-                            {komisiData.map((k) => (
-                              <div key={k.id} className="flex flex-col items-center">
-                                <div className="w-px h-4 shrink-0 bg-slate-200 hidden sm:block"></div>
-                                <motion.button
-                                  onClick={() => setActiveTab(k.id)}
-                                  whileHover={{ scale: 1.03 }}
-                                  className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:border-gold transition-all cursor-pointer flex flex-col items-center w-full h-full"
-                                >
-                                  <h4 className="font-semibold text-dark-green text-base">{k.name}</h4>
-                                  <p className="text-slate-500 text-xs mt-1 line-clamp-2">{k.title}</p>
-                                </motion.button>
-                              </div>
-                            ))}
-                          </div>
+                                </div>
+                                <p className="font-bold text-dark-green text-base leading-tight mb-1">{staff.name}</p>
+                                <p className="text-slate-500 text-xs">{staff.kelas}</p>
+                              </motion.div>
+                            </div>
+                          ))} 
                         </div>
                       </div>
-                    </div>
+
+                      {/* 4. Komisi 1-4 (Tingkat 3) */}
+                        <div className="flex justify-center">
+                          <div className="w-0.5 h-6 sm:h-6 bg-slate-400" aria-hidden="true" />
+                      </div>
+                      <div className="relative w-full">
+                        <div className="absolute top-0 left-[11.8%] right-[11.7%] h-0.5 bg-slate-400 hidden lg:block" aria-hidden="true" />
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative">
+                          {komisiData.map((k) => (
+                            <div key={k.id} className="flex flex-col items-center">
+                              <div className="w-0.5 h-6 lg:h-6 bg-slate-400" aria-hidden="true" />
+                              <motion.div
+                                whileHover={{ scale: 1.01 }}
+                                className="group bg-white border border-slate-200 rounded-2xl p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col items-center w-full h-full"
+                              >
+                                {/* Container Image: Squircle Shape */}
+                                <div className="relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-goldenrod/30 mb-4 bg-slate-50">
+                                  {k.groupImage ? (
+                                    <img 
+                                      src={k.groupImage} 
+                                      alt={k.name} 
+                                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                    />
+                                  ) : (
+                                    <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-slate-600">
+                                      {k.name.charAt(0)}
+                                    </div>
+                                  )}
+                                </div>
+                                
+                                <div className="flex-1 flex flex-col justify-center mb-4">
+                                  <h4 className="font-bold text-dark-green text-lg leading-tight">{k.name}</h4>
+                                  <p className="text-dark-green font-bold text-xs mt-1 leading-tight">{k.title}</p>
+                                </div>
+                                
+                                {/* Link Box to Committee Tab */}
+                                <div className="w-full pt-3 border-t border-slate-100">
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation()
+                                      setActiveTab(k.id)
+                                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                                    }}
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-dark-green hover:bg-goldenrod text-white text-[10px] font-regular rounded-md transition-all uppercase tracking-wider"
+                                  >
+                                    {k.name} <ExternalLink size={10} />
+                                  </button>
+                                </div>
+                              </motion.div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      </div>
                   </motion.div>
                 )}
                 {activeTab === 'proker' && ( /* Rendering kondisional untuk Proker */
