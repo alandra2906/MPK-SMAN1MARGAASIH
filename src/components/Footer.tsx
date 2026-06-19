@@ -1,4 +1,4 @@
-import { Instagram, Mail, MapPin, ExternalLink } from 'lucide-react'
+import { Instagram, Mail, ExternalLink } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -23,7 +23,6 @@ export default function Footer() {
               Lokasi Sekolah
             </h3>
             <div className="flex items-start gap-3 text-slate-400 text-sm">
-              <MapPin size={18} className="mt-0.5 shrink-0 text-gold" />
               <div className="flex flex-col gap-3">
                 <p>
                   Jl. Terusan Taman Kopo Indah 3, Mekar Rahayu, Kec. Margaasih, Kabupaten Bandung, Jawa Barat.
@@ -37,6 +36,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1.5 w-fit px-3 py-1.5 bg-gold/10 hover:bg-gold text-gold hover:text-dark-green text-[11px] font-bold rounded-md transition-all duration-300 border border-gold/30"
                 >
                   Lihat di Google Maps
+                  <br />
                   <ExternalLink size={12} />
                 </a>
               </div>
@@ -70,10 +70,20 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bagian bawah footer yang dimodifikasi */}
         <div className="mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-xs">
             © {new Date().getFullYear()} MPK SMAN 1 Margaasih
           </p>
+          
+          <a
+            href="https://www.instagram.com/ieah296/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 hover:text-gold text-xs transition-colors duration-300 cursor-pointer"
+          >
+            Who made this?
+          </a>
         </div>
       </div>
     </footer>

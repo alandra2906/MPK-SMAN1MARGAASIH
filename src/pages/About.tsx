@@ -86,7 +86,7 @@ const allProkerData: ProkerItem[] = [
   { category: 'komisi1', title: 'GMYA (Give Me Your Aspiration)', tujuan: 'Menampung kritik/saran dari siswa/i SMAN 1 Margaasih mengenai kegiatan dan lomba-lomba untuk acara yang telah diadakan.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/GMYA.webp' },
   { category: 'komisi1', title: 'Laman MPK', tujuan: 'Sebagai media informasi dan komunikasi resmi untuk menyampaikan program kerja, kegiatan, serta aspirasi siswa yang mudah diakses oleh seluruh siswa/i SMAN 1 Margaasih.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/Laman MPK.webp' },
   { category: 'komisi1', title: 'SAKEDAP (Saran Kegiatan DAn Perlombaan)', tujuan: 'Menampung aspirasi siswa/i pasca event melalui formulir yang akan disediakan pada laman MPK yang akan diunggah pada Story Instagram MPK dan OSIS yang sudah disediakan.', pelaksanaan: 'Jangka Panjang', imgSrc: '/images/SAKEDAP.webp' },
-  { category: 'komisi1', title: 'PENA (Pesan Anonim)', tujuan: 'Sebagai wadah penyaluran pesan siswa/i SMAN 1 Margaasih secara anonim kepada para pengurus MPK dan OSIS.', pelaksanaan: 'Jangka Pendek' },
+  { category: 'komisi1', title: 'PENA (Pesan Anonim)', tujuan: 'Sebagai wadah penyaluran pesan anonim siswa/i SMAN 1 Margaasih secara personal kepada para pengurus MPK dan OSIS pasca event MPLS.', pelaksanaan: 'Jangka Pendek' },
   { category: 'komisi2', title: 'Poster Peringatan Hari Besar dan Nasional', tujuan: 'Menumbuhkan rasa nasionalisme dan semangat kebangsaan, berupa poster yang di buat. Di share melalui story Instagram MPK.', pelaksanaan: 'Jangka panjang' },
   { category: 'komisi2', title: 'Lebih Mengaktifkan Media Sosial (Instagram)', tujuan: 'Mendokumentasikan setiap kegiatan yang berhubungan dengan OSIS.', pelaksanaan: 'Jangka Panjang' },
   { category: 'komisi2', title: 'Membuat Broadcast Pada Setiap Kegiatan Rapat', tujuan: 'Tujuan proker ini untuk membangun sistem komunikasi yang terstruktur dan jelas bagi pengurus.', pelaksanaan: 'Jangka Panjang' },
@@ -302,7 +302,7 @@ export default function About() {
                                 className="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center w-full h-full min-h-[210px]"
                               >
                                 <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">{staff.label}</p>
-                                <div className="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-slate-200 shadow-sm bg-slate-50">
+                                <div className="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-goldenrod/35 shadow-sm bg-slate-50">
                                   {staff.image ? (
                                     <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
                                   ) : (
@@ -334,7 +334,7 @@ export default function About() {
                                 className="group bg-white border border-slate-200 rounded-2xl p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col items-center w-full h-full"
                               >
                                 {/* Container Image: Squircle Shape */}
-                                <div className="relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-goldenrod/30 mb-4 bg-slate-50">
+                                <div className="relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-goldenrod/35 mb-4 bg-slate-50">
                                   {k.groupImage ? (
                                     <img 
                                       src={k.groupImage} 
@@ -349,8 +349,8 @@ export default function About() {
                                 </div>
                                 
                                 <div className="flex-1 flex flex-col justify-center mb-4">
-                                  <h4 className="font-bold text-dark-green text-lg leading-tight">{k.name}</h4>
-                                  <p className="text-dark-green font-bold text-xs mt-1 leading-tight">{k.title}</p>
+                                  <h4 className="font-bold text-dark-green text-lg leading-tight mb-1">{k.name}</h4>
+                                  <p className="text-slate-500 text-xs">{k.title}</p>
                                 </div>
                                 
                                 {/* Link Box to Committee Tab */}

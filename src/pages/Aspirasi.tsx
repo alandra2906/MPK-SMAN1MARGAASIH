@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { MessageSquare, Send, ExternalLink, ClipboardCopy, MessageCircleQuestion, Award } from 'lucide-react'
+import { MessageSquare, Send, ExternalLink, ClipboardCopy, MessageCircleQuestion, Award, Check } from 'lucide-react'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -202,7 +202,7 @@ export default function Aspirasi() {
                             <h3 className="text-xl font-bold text-dark-green">SAKEDAP</h3>
                           </div>
                         </div>
-                        <h4 className="text-sm font-semibold text-slate-700 mb-2">Saran Kegiatan & Perlombaan</h4>
+                        <h4 className="text-sm font-semibold text-slate-700 mb-2">Saran KEgiatan DAn Perlombaan</h4>
                         <p className="text-slate-600 text-sm leading-relaxed">
                           Wadah khusus untuk menampung kesan, pesan, ide kreatif, serta umpan balik siswa selama dan sesudah kegiatan sekolah maupun perlombaan berlangsung.
                         </p>
@@ -222,20 +222,20 @@ export default function Aspirasi() {
                   {/* Kesimpulan & Core Values di bagian bawah */}
                   <div className="mt-4 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                     <p className="text-slate-600 text-sm leading-relaxed text-center max-w-2xl mx-auto mb-6">
-                      Kedua program ini mencerminkan komitmen penuh <strong className="text-dark-green">MPK SMAN 1 Margaasih</strong> untuk mendengarkan setiap suara siswa dan mengubahnya menjadi aksi nyata demi perbaikan berkelanjutan nyata di lingkungan sekolah.
+                      Kedua program ini mencerminkan komitmen penuh dari <strong className="text-dark-green">MPK SMAN 1 Margaasih</strong> untuk mendengarkan setiap suara siswa dan mengubahnya menjadi aksi nyata demi perbaikan berkelanjutan nyata di lingkungan sekolah.
                     </p>
                     
                     <div className="flex flex-wrap justify-center gap-3">
                       <div className="flex items-center gap-2 px-4 py-2 bg-[#f8fafc] border border-slate-200/60 rounded-xl text-xs font-medium text-slate-700">
-                        <span className="w-2 h-2 rounded-full bg-goldenrod" />
+                        <Check size={16} className="text-goldenrod"/>
                         Aspirasi Transparan
                       </div>
                       <div className="flex items-center gap-2 px-4 py-2 bg-[#f8fafc] border border-slate-200/60 rounded-xl text-xs font-medium text-slate-700">
-                        <span className="w-2 h-2 rounded-full bg-goldenrod" />
+                        <Check size={16} className="text-goldenrod"/>
                         Tindak Lanjut Jelas
                       </div>
                       <div className="flex items-center gap-2 px-4 py-2 bg-[#f8fafc] border border-slate-200/60 rounded-xl text-xs font-medium text-slate-700">
-                        <span className="w-2 h-2 rounded-full bg-goldenrod" />
+                        <Check size={16} className="text-goldenrod"/>
                         Akses untuk Semua Siswa
                       </div>
                     </div>
