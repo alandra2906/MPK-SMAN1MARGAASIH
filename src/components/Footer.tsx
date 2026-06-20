@@ -11,9 +11,7 @@ export default function Footer() {
               Tentang Laman MPK
             </h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Laman MPK adalah salah satu program kerja Komisi 1 yang bertujuan
-              untuk memberikan informasi, transparansi, wadah aspirasi, kritik, dan saran bagi
-              seluruh warga sekolah. Dibuat dengan semangat demokrasi dan pelayanan.
+              Laman MPK adalah salah satu program kerja Komisi 1 yang bertujuan sebagai media informasi dan komunikasi resmi untuk menyampaikan program kerja, kegiatan, serta aspirasi siswa yang mudah diakses oleh seluruh siswa/i SMAN 1 Margaasih.
             </p>
           </div>
 

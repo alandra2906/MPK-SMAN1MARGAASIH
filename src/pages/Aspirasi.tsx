@@ -93,8 +93,8 @@ export default function Aspirasi() {
             Sampaikan Aspirasimu
           </h1>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-            Setiap suara berarti. Gunakan program GMYA untuk menyampaikan ide,
-            kritik, dan saran demi sekolah yang lebih baik.
+            Setiap suara berarti sangat berarti bagi kami. Gunakan program GMYA dan SAKEDAP untuk menyampaikan ide,
+            kritik, dan saran yang ditujukan untuk pihak sekolah, OSIS, MPK, maupun pihak lainnya demi keberlangsungan lingkungan sekolah yang lebih baik.
           </p>
         </div>
 

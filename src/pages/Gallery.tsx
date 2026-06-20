@@ -21,8 +21,10 @@ const galleryImages = [
   { src: '/images/c5b4c8d3-a390-4596-820c-e92047eecdec.webp', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
   { src: '/images/930b664d-06a9-4bad-b171-773a5c4cd0aa.webp', caption: 'Foto Bersama Pra Foto Profil Sekolah 2026' },
   { src: '/images/b5c7f77d-7277-440b-a0ed-bd1e62d107d6.webp', caption: 'Sesi Foto Profil Sekolah 2026' },
-  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.webp', caption: 'Sesi Foto Profil Sekolah 2026' },
-  { src: '/images/b7489a3b-fbff-41cd-a441-502ce57aff68.webp', caption: 'Sesi Foto Profil Sekolah 2026' }, 
+  { src: '/images/31b69b15-aaa2-4136-8787-449dbfff367c.jpg', caption: 'Persiapan Pra Sidang Pleno II 2026' },
+  { src: '/images/356a8d7b-3b59-451d-b34c-6e5b455d3b09.webp', caption: 'Dokumentasi Sidang Pleno II 2026' }, 
+  { src: '/images/e2e881bd-2e05-45df-8151-fabaf46c6895.webp', caption: 'Dokumentasi Sidang Pleno II 2026' },
+  { src: '/images/WhatsApp Image 2026-06-20 at 19.02.30.webp', caption: 'Foto Bersama OSIS & MPK pasca Sidang Pleno II 2026' },
 ]
 
 const displayedImages = [...galleryImages].reverse()
@@ -109,8 +111,8 @@ export default function Gallery() {
             Journey MPK
           </h1>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-            Kenangan kepemimpinan generasi sebelumnya dan dokumentasi visual
-            kegiatan Majelis Perwakilan Kelas.
+            Perjalanan kepemimpinan dari generasi-generasi sebelumnya dan dokumentasi
+            kegiatan Majelis Perwakilan Kelas SMAN 1 Margaasih.
           </p>
         </div>
 
@@ -123,7 +125,7 @@ export default function Gallery() {
             Hall of Fame
           </h2>
           <p className="text-slate-500 text-center mb-10">
-            Jejak Kepemimpinan Generasi Sebelumnya
+            Jejak kepemimpinan ketua dan wakil ketua MPK pada generasi-generasi sebelumnya.
           </p>
 
           <div className="max-w-3xl mx-auto">
@@ -183,7 +185,7 @@ export default function Gallery() {
             Dokumentasi
           </h2>
           <p className="text-slate-500 text-center mb-12 max-w-xl mx-auto">
-            Dokumentasi dan Momen-momen Kegiatan MPK.
+            Dokumentasi dan momen-momen yang berarti dalam kegiatan MPK.
           </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

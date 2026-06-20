@@ -157,8 +157,8 @@ export default function About() {
             About MPK
           </h1>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-            Mengenal lebih dekat struktur, program, dan anggota Majelis
-            Perwakilan Kelas periode 2025/2026.
+            Mengenal lebih dekat struktur, program kerja, dan anggota-anggota Majelis
+            Perwakilan Kelas SMAN 1 Margaasih periode 2025/2026.
           </p>
         </div>
 
@@ -384,7 +384,7 @@ export default function About() {
                   >
                     <h2 className="text-3xl font-bold text-dark-green mb-2 text-center">Program Kerja MPK</h2>
                     <p className="text-slate-500 text-center mb-6 max-w-2xl mx-auto">
-                      Inisiatif strategis MPK untuk memajukan kesejahteraan siswa
+                      Program kerja (proker) MPK periode 2025/2026 dibagi menjadi beberapa kategori sesuai dengan bidangnya. Silakan pilih kategori berikut ini untuk melihat daftar program kerja yang telah direncanakan selama satu masa jabatan kedepan.
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-2 mb-10 max-w-3xl mx-auto px-1">
