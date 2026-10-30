@@ -1,0 +1,223 @@
+{
+  "pembina": {
+    "title": "Pembina MPK",
+    "name": "Adang Cucu Cahyana, S.Pd."
+  },
+  "ketua": {
+    "title": "Ketua MPK",
+    "name": "Sherin Alivka S",
+    "kelas": "XII IPA 2",
+    "image": "/images/Dokumentasi foto per orang/7.png"
+  },
+  "wakil": {
+    "title": "Wakil Ketua MPK",
+    "name": "Nailah Khoirunnisa",
+    "kelas": "XII IPA 4",
+    "image": "/images/Dokumentasi foto per orang/2.png"
+  },
+  "pengurusInti": [
+    {
+      "label": "Sekretaris 1",
+      "name": "Aulia Panca Octaviani",
+      "kelas": "XII IPA 1",
+      "image": "/images/Dokumentasi foto per orang/23.png"
+    },
+    {
+      "label": "Sekretaris 2",
+      "name": "Nadila Puspa Rini",
+      "kelas": "XI IPS 8",
+      "image": "/images/Dokumentasi foto per orang/16.png"
+    },
+    {
+      "label": "Bendahara 1",
+      "name": "Indri Pratiwi",
+      "kelas": "XII IPS 6",
+      "image": "/images/Dokumentasi foto per orang/1.png"
+    },
+    {
+      "label": "Bendahara 2",
+      "name": "Annisa Agustina",
+      "kelas": "XI IPA 5",
+      "image": "/images/Dokumentasi foto per orang/17.png"
+    }
+  ],
+  "komisi": [
+    {
+      "id": "komisi1",
+      "name": "Komisi 1",
+      "title": "Penampung dan Penyalur Aspirasi",
+      "description": "Komisi I berfokus dalam perannya menjadi penyalur aspirasi siswa SMA Negeri 1 Margaasih, yang mempunyai tugas utama sebagai wadah penampung aspirasi siswa, juga sebagai pengawas OSIS Sekbid 1 dan Sekbid 2.",
+      "groupImage": "/images/komisi/komisi1.jpeg",
+      "members": [
+        {
+          "name": "Callula Shafa Avila",
+          "kelas": "XII IPA 3",
+          "jabatan": "Ketua Komisi",
+          "image": "/images/Dokumentasi foto per orang/22.png"
+        },
+        {
+          "name": "Alya Batrisya Said",
+          "kelas": "XII IPS 5",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/9.png"
+        },
+        {
+          "name": "Muhammad Alandra Fairuz",
+          "kelas": "XI IPS 7",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/18.png",
+          "link": "https://www.instagram.com/ieah296/"
+        },
+        {
+          "name": "Azkya Royan Maharani",
+          "kelas": "XI IPS 9",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/20.png"
+        },
+        {
+          "name": "Riva Sukma Amilin",
+          "kelas": "XI IPA 2",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/25.png"
+        }
+      ]
+    },
+    {
+      "id": "komisi2",
+      "name": "Komisi 2",
+      "title": "Hubungan Masyarakat",
+      "description": "Komisi II berperan sebagai humas organisasi, publikasi dan dokumentasi kegiatan MPK SMA Negeri 1 Margaasih, serta bertugas sebagai pengawas kinerja OSIS Sekbid 3 dan Sekbid 4.",
+      "groupImage": "/images/komisi/komisi2.jpeg",
+      "members": [
+        {
+          "name": "Naya Widyani Putri",
+          "kelas": "XII IPA 5",
+          "jabatan": "Ketua Komisi",
+          "image": "/images/Dokumentasi foto per orang/3.png"
+        },
+        {
+          "name": "Seli Maulidia",
+          "kelas": "XII IPS 3",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/6.png"
+        },
+        {
+          "name": "Sabrina Bilqis",
+          "kelas": "XII IPS 4",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/5.png"
+        },
+        {
+          "name": "Azillie Zulfa Syahrushiam",
+          "kelas": "XI IPA 4",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/24.png"
+        },
+        {
+          "name": "Hafizha Nur Khaira",
+          "kelas": "XI IPA 3",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/10.png"
+        }
+      ]
+    },
+    {
+      "id": "komisi3",
+      "name": "Komisi 3",
+      "title": "Ekstrakulikuler dan Prestasi",
+      "description": "Komisi III bertugas menjadi pengurus bidang ekstrakurikuler di SMA Negeri 1 Margaasih, juga sebagai pengawas kinerja OSIS Sekbid 5 dan 6.",
+      "groupImage": "/images/komisi/komisi3.jpeg",
+      "members": [
+        {
+          "name": "Raifa Junia Keaila",
+          "kelas": "XII IPS 7",
+          "jabatan": "Ketua Komisi",
+          "image": "/images/Dokumentasi foto per orang/26.png"
+        },
+        {
+          "name": "Shevira Dwi Fitria",
+          "kelas": "XII IPS 1",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/8.png"
+        },
+        {
+          "name": "Neng Wini Fathu Rohmah",
+          "kelas": "XI IPA 1",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/15.png"
+        },
+        {
+          "name": "Assyfa Rahmi Illahi Q.J.P.K",
+          "kelas": "XI IPA 3",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/12.png"
+        }
+      ]
+    },
+    {
+      "id": "komisi4",
+      "name": "Komisi 4",
+      "title": "Keanggotaan dan Administrasi",
+      "description": "Komisi IV berperan sebagai konektor (perombak, memperbaiki kesalahan) administrasi organisasi, serta sebagai pengurus Anggaran Dasar dan Rumah Tangga organisasi, juga bertugas mengawasi kinerja OSIS Sekbid 7 dan Sekbid 8.",
+      "groupImage": "/images/komisi/komisi4.jpg",
+      "members": [
+        {
+          "name": "Azriel Falco Moreno",
+          "kelas": "XII IPA 2",
+          "jabatan": "Ketua Komisi",
+          "image": "/images/Dokumentasi foto per orang/11.png"
+        },
+        {
+          "name": "Syifa Raya Merlinda",
+          "kelas": "XI IPA 2",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/14.png"
+        },
+        {
+          "name": "Nazma Mushal Hakim",
+          "kelas": "Kelas Terbuka",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/21.png"
+        },
+        {
+          "name": "Nessa Astriyani",
+          "kelas": "XI IPA 5",
+          "jabatan": "Anggota",
+          "image": "/images/Dokumentasi foto per orang/4.png"
+        }
+      ]
+    }
+  ],
+  "proker": [
+    { "category": "sekretaris", "title": "Membuat File Anggota MPK", "tujuan": "Agar seluruh data MPK tersusun rapih dan tidak dan tidak mudah hilang.", "pelaksanaan": "Jangka pendek" },
+    { "category": "sekretaris", "title": "Membuat File Data Keanggotaan MPK & OSIS", "tujuan": "Agar seluruh data MPK OSIS tersusun rapih, tidak mudah hilang dan gampang dicari ketika sedang membutuhkan data anggota-anggota OSIS dan MPK.", "pelaksanaan": "Jangka pendek" },
+    { "category": "sekretaris", "title": "Membuat Surat Peringatan", "tujuan": "Agar seluruh anggota MPK OSIS dapat bertanggung jawab di setiap kesalahannya dengan adanya surat ini.", "pelaksanaan": "Jangka menengah" },
+    { "category": "sekretaris", "title": "Membuat Lampiran Daftar Kehadiran Anggota MPK Pada Setiap Rapat", "tujuan": "Agar mengetahui dan memantau perkembangan kehadiran anggota MPK dalam setiap rapat bulanan.", "pelaksanaan": "Jangka menengah" },
+    { "category": "sekretaris", "title": "Pembuatan kalender kegiatan MPK", "tujuan": "Agar dapat memastikan seluruh kegiatan berjalan sesuai rencana dan mengurangi resiko penundaan", "pelaksanaan": "Jangka menengah" },
+    { "category": "sekretaris", "title": "Membuat Google drive untuk arsip MPK", "tujuan": "Agar seluruh file dan surat MPK tersusun rapi, tidak mudah hilang, serta mudah dibagikan kepada sekretaris MPK periode berikutnya sebagai referensi", "pelaksanaan": "Jangka panjang" },
+    { "category": "sekretaris", "title": "Membuat Notulensi Setiap Rapat", "tujuan": "Agar terdapat ringkasan tentang materi rapat yang telah disampaikan.", "pelaksanaan": "Jangka panjang" },
+    { "category": "sekretaris", "title": "Membuat SIPRO-MPK (Sistem Proposal Terpadu)", "tujuan": "Tujuannya untuk mempermudah proses pengajuan izin dan persetujuan dalam pelaksanaan kegiatan atau acara MPK", "pelaksanaan": "Jangka panjang" },
+    { "category": "bendahara", "title": "Mengadakan Iuran Kas Rutin", "tujuan": "Melatih kedisiplinan dan tanggung jawab seorang anggota dengan membayar iuran kas sebesar Rp.10.000/bulan degan tujuan menambah dan menjaga kestabilan kas MPK.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "bendahara", "title": "Mencatat Pengeluaran dan Pemasukan", "tujuan": "Untuk transparansi, mengetahui pengeluaran dan pemasukan dana dengan jelas.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "bendahara", "title": "Konsultasi Keuangan Dengan Ketua dan Wakil MPK", "tujuan": "Untuk memastikan pengelolaan dan penggunaan dana MPK berjalan dengan lancar.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi1", "title": "KoPI (Kotak AsPIrasi)", "tujuan": "Menampung aspirasi melalui kotak aspirasi yang akan disediakan untuk menampung suara dari siswa/i SMAN 1 Margaasih.", "pelaksanaan": "Jangka Panjang", "imgSrc": "/images/KOPI.webp" },
+    { "category": "komisi1", "title": "GMYA (Give Me Your Aspiration)", "tujuan": "Menampung kritik/saran dari siswa/i SMAN 1 Margaasih mengenai kegiatan dan lomba-lomba untuk acara yang telah diadakan.", "pelaksanaan": "Jangka Panjang", "imgSrc": "/images/GMYA.webp" },
+    { "category": "komisi1", "title": "Laman MPK", "tujuan": "Sebagai media informasi dan komunikasi resmi untuk menyampaikan program kerja, kegiatan, serta aspirasi siswa yang mudah diakses oleh seluruh siswa/i SMAN 1 Margaasih.", "pelaksanaan": "Jangka Panjang", "imgSrc": "/images/Laman MPK.webp" },
+    { "category": "komisi1", "title": "SAKEDAP (Saran Kegiatan DAn Perlombaan)", "tujuan": "Menampung aspirasi siswa/i pasca event melalui formulir yang akan disediakan pada laman MPK yang akan diunggah pada Story Instagram MPK dan OSIS yang sudah disediakan.", "pelaksanaan": "Jangka Panjang", "imgSrc": "/images/SAKEDAP.webp" },
+    { "category": "komisi1", "title": "PENA (Pesan Anonim)", "tujuan": "Sebagai wadah penyaluran pesan anonim siswa/i SMAN 1 Margaasih secara personal kepada para pengurus MPK dan OSIS pasca event MPLS.", "pelaksanaan": "Jangka Pendek" },
+    { "category": "komisi2", "title": "Poster Peringatan Hari Besar dan Nasional", "tujuan": "Menumbuhkan rasa nasionalisme dan semangat kebangsaan, berupa poster yang di buat. Di share melalui story Instagram MPK.", "pelaksanaan": "Jangka panjang" },
+    { "category": "komisi2", "title": "Lebih Mengaktifkan Media Sosial (Instagram)", "tujuan": "Mendokumentasikan setiap kegiatan yang berhubungan dengan OSIS.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi2", "title": "Membuat Broadcast Pada Setiap Kegiatan Rapat", "tujuan": "Tujuan proker ini untuk membangun sistem komunikasi yang terstruktur dan jelas bagi pengurus.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi2", "title": "Membuat Poster Orasi Pemilihan Ketua dan Wakil Ketua MPK Masa Periode Selanjutnya", "tujuan": "Membuat poster informasi tentang pergantian ketua dan wakil ketua MPK untuk periode selanjutnya.", "pelaksanaan": "Jangka pendek" },
+    { "category": "komisi3", "title": "Melaksanakan Kegiatan Sosialiasi Ekstrakurikuler", "tujuan": "Agar seluruh siswa/siswi SMA Negeri 1 Margasih memperoleh pemahaman mengenai pilihan ekstrakurikuler yang ada serta terdorong untuk mengikuti kegiatan ekstrakurikuler sesuai dengan minat dan bakat masing-masing.", "pelaksanaan": "Jangka Pendek" },
+    { "category": "komisi3", "title": "Tanda Penghargaan Ekstrakurikuler Yang Paling Banyak Meraih Juara Selama Setahun", "tujuan": "Memberikan motivasi serta rasa bangga bagi seluruh anggota esktrakurikuler atas kerja kerja mereka.", "pelaksanaan": "Jangka Pendek" },
+    { "category": "komisi3", "title": "Koordinasi Rutin Dengan Pembina dan Ketua Ekstrakurikuler Terkait Jadwal Serta Kegiatan Eskul", "tujuan": "Agar pelaksanaan kegiatan ekstrakurikuler dapat berjalan dengan tertib dan sesuai dengan jadwal yang telah ditetapkan.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi3", "title": "Memfasilitasi Penyampaian Informasi Kegiatan Ekstrakurikuler Melalui Media Informasi Yang Tersedia", "tujuan": "Agar mendukung keterbukaan informasi kegiatan ekstrakurikulerkepada seluruh siswa/siswi.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi3", "title": "Mendata Pencapaian Hasil Perlombaan yang Telah Diikuti oleh Anggota Ekstrakurikuler", "tujuan": "Memberikan apresiasi atas keberhasilan agar memotivasi semangat siswa dalam berprestasi.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi3", "title": "Meninjau Pelaksanaan Latihan Mingguan Sesuai Ketetapan Pengurus Ekstrakurikuler", "tujuan": "Menjamin kelancaran seluruh agenda tanpa ada gangguan.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi3", "title": "Merangkum Seluruh Data Kegiatan dan Pencapaian Selama Satu Tahun Kepengurusan", "tujuan": "Menjadi bahan evaluasi bagi pengurus selanjutnya agar menjadi lebih baik.", "pelaksanaan": "Jangka Panjang" },
+    { "category": "komisi4", "title": "Pemantauan Awal Terhadap Pelaksanaan AD/ART OSIS/MPK", "tujuan": "Melakukan pemantauan awal terhadap pelaksanaan AD/ART OSIS/MPK pada awal masa jabatan agar seluruh kegiatan dan struktur organisasi berjalan sesuai ketentuan.", "pelaksanaan": "Jangka pendek" },
+    { "category": "komisi4", "title": "Mengawasi Kinerja OSIS Dalam Melaksanakan Tugas", "tujuan": "Mengawasi kinerja OSIS dalam melaksanakan kegiatanya.", "pelaksanaan": "Jangka menengah" },
+    { "category": "komisi4", "title": "Melaksanakan Rapat Rutin MPK", "tujuan": "Melaksanakan rapat rutin tiap 2 bulan untuk membahas kembali program kerja dan rencana kedepan", "pelaksanaan": "Jangka panjang" }
+  ]
+}

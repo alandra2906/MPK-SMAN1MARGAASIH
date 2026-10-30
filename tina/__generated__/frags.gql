@@ -1,0 +1,76 @@
+fragment AboutParts on About {
+  __typename
+  pembina {
+    __typename
+    title
+    name
+  }
+  ketua {
+    __typename
+    title
+    name
+    kelas
+    image
+  }
+  wakil {
+    __typename
+    title
+    name
+    kelas
+    image
+  }
+  pengurusInti {
+    __typename
+    label
+    name
+    kelas
+    image
+  }
+  komisi {
+    __typename
+    id
+    name
+    title
+    description
+    groupImage
+    members {
+      __typename
+      name
+      kelas
+      jabatan
+      image
+      link
+    }
+  }
+  proker {
+    __typename
+    category
+    title
+    tujuan
+    pelaksanaan
+    imgSrc
+  }
+}
+
+fragment GalleryParts on Gallery {
+  __typename
+  alumni {
+    __typename
+    year
+    ketua
+    wakil
+  }
+  moments {
+    __typename
+    src
+    caption
+  }
+}
+
+fragment AspirasiParts on Aspirasi {
+  __typename
+  gmyaFormUrl
+  gmyaBanner
+  sakedapFormUrl
+  sakedapBanner
+}

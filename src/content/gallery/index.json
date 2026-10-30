@@ -1,0 +1,37 @@
+{
+  "alumni": [
+    { "year": "2025/2026", "ketua": "Sherin Alivka S (XII IPA 2)", "wakil": "Nailah Khoirunnisa (XII IPA 4)" },
+    { "year": "2024/2025", "ketua": "Allesvien Swary Dzikri Qolbi (XII IPA 3)", "wakil": "Maulida Nur Nazmina (XII IPA 2)" },
+    { "year": "2023/2024", "ketua": "Bimo Nugroho Adji (XII IPA 3)", "wakil": "Ikmal Khoeruddin (XII IPA 4)" },
+    { "year": "2022/2023", "ketua": "Nabila Putri Asti Febrianty (XII IPS 1)", "wakil": "Dwi Zulfa N.F (XII IPA 3)" },
+    { "year": "2021/2022", "ketua": "Chintya Rahmadanti (XII IPA 3)", "wakil": "Aghniya Hilyah Putri (XII IPS 1)" },
+    { "year": "2020/2021", "ketua": "Faqih Ragi (XI IPA 4)", "wakil": "Halimun Sanjaya (XI IPA 2)" },
+    { "year": "2019/2020", "ketua": "M Dias Ilyasa (XI IPA 3)", "wakil": "Toni Yusuf (XI IPS 3)" }
+  ],
+  "moments": [
+    { "src": "/images/IMG-20251006-WA0120.jpg.webp", "caption": "Pasca Pemilihan Ketua dan Wakil Ketua MPK Periode 2025/2026" },
+    { "src": "/images/IMG-20260131-WA0009.jpg.webp", "caption": "Foto Bersama Pasca Sidang Pleno I 2026" },
+    { "src": "/images/IMG-20260131-WA0015.jpg.webp", "caption": "Foto Bersama Pasca Sidang Pleno I 2026" },
+    { "src": "/images/IMG-20260131-WA0038.jpg.webp", "caption": "Foto Bersama OSIS & MPK pasca Sidang Pleno I 2026" },
+    { "src": "/images/IMG-20260130-WA0104.jpg.webp", "caption": "Rapat Pra Sidang Pleno I 2026" },
+    { "src": "/images/IMG-20251030-WA0074.jpg.webp", "caption": "Rapat Pra Event Career Day 2026" },
+    { "src": "/images/c5b4c8d3-a390-4596-820c-e92047eecdec.webp", "caption": "Foto Bersama Pra Foto Profil Sekolah 2026" },
+    { "src": "/images/930b664d-06a9-4bad-b171-773a5c4cd0aa.webp", "caption": "Foto Bersama Pra Foto Profil Sekolah 2026" },
+    { "src": "/images/b5c7f77d-7277-440b-a0ed-bd1e62d107d6.webp", "caption": "Sesi Foto Profil Sekolah 2026" },
+    { "src": "/images/31b69b15-aaa2-4136-8787-449dbfff367c.jpg", "caption": "Persiapan Pra Sidang Pleno II 2026" },
+    { "src": "/images/356a8d7b-3b59-451d-b34c-6e5b455d3b09.webp", "caption": "Dokumentasi Sidang Pleno II 2026" },
+    { "src": "/images/e2e881bd-2e05-45df-8151-fabaf46c6895.webp", "caption": "Dokumentasi Sidang Pleno II 2026" },
+    { "src": "/images/WhatsApp Image 2026-06-20 at 19.02.30.webp", "caption": "Foto Bersama OSIS & MPK pasca Sidang Pleno II 2026" },
+    { "src": "/images/1784213734068.JPG", "caption": "Dokumentasi Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/1784213737038.JPG", "caption": "Dokumentasi Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/1784213741023.JPG", "caption": "Foto Bersama OSIS & MPK Pasca Rapat Evaluasi Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/1784213737562.JPG", "caption": "Dokumentasi Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/1784213739245.JPG", "caption": "Dokumentasi Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/WhatsApp Image 2026-07-27 at 21.51.45.jpeg", "caption": "Foto Bersama OSIS & MPK pasca Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/WhatsApp Image 2026-07-27 at 21.51.44.jpeg", "caption": "Foto Bersama OSIS & MPK pasca Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/WhatsApp Image 2026-07-27 at 21.51.40.jpeg", "caption": "Foto Bersama OSIS & MPK pasca Kegiatan MPLS AKRASERA 2026" },
+    { "src": "/images/WhatsApp Image 2026-08-18 at 17.15.53.jpeg", "caption": "Rapat Pra Event Laskara 2026" },
+    { "src": "/images/WhatsApp Image 2026-10-27 at 16.36.47.jpeg", "caption": "Rapat Evaluasi Event Laskara 2026" },
+    { "src": "/images/WhatsApp Image 2026-10-27 at 16.36.48.jpeg", "caption": "Rapat Evaluasi Event Laskara 2026" }
+  ]
+}
